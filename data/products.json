@@ -1,0 +1,13 @@
+[
+  {
+    "id": "kopi-bubuk-bintang",
+    "name": "Kopi Bubuk Bintang Pringsewu",
+    "type": "Premium Robusta Powder",
+    "roastLevel": "Medium-Dark",
+    "tastingNotes": ["Bold Cocoa", "Caramelized Sugar", "Earthy Bold"],
+    "price": 35000,
+    "description": "Kopi bubuk robusta Lampung asli pilihan kualitas premium dari Adiluwih, Pringsewu. Digiling dengan tingkat kehalusan presisi, menyajikan aroma kuat dan rasa mantap.",
+    "longDescription": "Kopi Bubuk Bintang Pringsewu merupakan produk unggulan kami yang diproduksi oleh CV. Harapan Buah Hati Mandiri Tunggal. Terbuat dari 100% biji kopi robusta pilihan dataran Pringsewu yang dipetik merah secara selektif oleh petani mitra lokal. Diproses secara higienis dan disangrai menggunakan teknologi modern untuk menjaga konsistensi cita rasa robusta klasik yang tebal, wangi, dan rendah tingkat keasamannya. Sempurna untuk menikmati cangkir kopi tubruk otentik setiap hari.",
+    "image": "/images/product_fine_robusta.png"
+  }
+]

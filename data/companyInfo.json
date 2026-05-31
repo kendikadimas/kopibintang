@@ -1,0 +1,33 @@
+{
+  "name": "Kopi Bintang Pringsewu",
+  "legalName": "CV. Harapan Buah Hati Mandiri Tunggal",
+  "tagline": "Cita Rasa Kopi Robusta Asli Pringsewu",
+  "established": "2018",
+  "location": "Adiluwih, Pringsewu, Lampung",
+  "address": "Pekon Adiluwih, Kecamatan Adiluwih, Kabupaten Pringsewu, Lampung 35374",
+  "whatsapp": "0823 7799 8183",
+  "whatsappNumber": "6282377998183",
+  "email": "harapan.mandiritunggal.cv@gmail.com",
+  "philosophy": "Kami percaya bahwa secangkir kopi terbaik lahir dari dedikasi tanpa batas—mulai dari pelukan tanah Lampung, ketekunan jari-jemari petani lokal, hingga ketepatan proses pemanggangan modern.",
+  "vision": "Menjadi pionir produsen kopi robusta Lampung berkualitas tinggi yang memberdayakan petani lokal secara berkelanjutan dan dikenal secara nasional maupun global.",
+  "mission": [
+    "Menjaga kualitas produk kopi dari hulu ke hilir dengan standar kebersihan dan pemrosesan yang ketat.",
+    "Membangun hubungan kemitraan yang saling menguntungkan dan adil dengan petani kopi lokal di Pringsewu.",
+    "Mengadopsi teknologi roasting modern guna menghasilkan cita rasa kopi yang konsisten dan berkarakter unik.",
+    "Menyediakan layanan distribusi dan kemitraan maklon yang profesional, transparan, dan tepercaya."
+  ],
+  "values": [
+    {
+      "title": "Biji Pilihan (Selected Beans)",
+      "description": "Hanya menggunakan biji kopi robusta Lampung pilihan yang dipetik merah secara selektif oleh petani mitra kami di dataran Pringsewu."
+    },
+    {
+      "title": "Proses Higienis (Hygienic Process)",
+      "description": "Setiap tahap pengolahan, mulai dari pencucian, penjemuran, hingga pengemasan, dikerjakan dengan standar kebersihan tertinggi untuk menjaga kemurnian kopi."
+    },
+    {
+      "title": "Roasting Modern (Modern Roasting)",
+      "description": "Menggunakan mesin roasting otomatis berteknologi tinggi untuk memastikan profil pemanggangan yang konsisten dan mengeluarkan cita rasa optimal."
+    }
+  ]
+}
