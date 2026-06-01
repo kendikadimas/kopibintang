@@ -99,7 +99,7 @@ export default function Kontak() {
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">WhatsApp Fast Response</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 truncate">
+                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
                   {CONTACT.whatsapp}
                 </span>
                 <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
@@ -123,7 +123,7 @@ export default function Kontak() {
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Panggilan Telepon</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 truncate">
+                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
                   {CONTACT.phone}
                 </span>
                 <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
@@ -147,7 +147,7 @@ export default function Kontak() {
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Email Korespondensi</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 truncate">
+                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-all">
                   {CONTACT.email}
                 </span>
                 <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
@@ -171,7 +171,7 @@ export default function Kontak() {
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Lokasi Workshop</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 truncate">
+                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
                   {CONTACT.addressShort}
                 </span>
                 <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
@@ -207,25 +207,25 @@ export default function Kontak() {
                 <div className="flex flex-col gap-4 mt-2 divide-y divide-fog/20">
                   {/* Q1 */}
                   <div className="flex flex-col gap-1.5 pt-4 first:pt-0">
-                    <strong className="font-display text-sm text-espresso font-semibold">Berapa volume minimal pemesanan (MOQ)?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Bagaimana cara membeli kopi untuk konsumsi pribadi?</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Kami melayani pembelian eceran (tanpa minimal order) untuk konsumsi rumah tangga, hingga kapasitas tonase berkala untuk agen/distributor resmi.
+                      Pemesanan eceran untuk retail/konsumsi pribadi dapat dilakukan langsung melalui WhatsApp kami. Kami melayani pengiriman ke seluruh Indonesia dengan pilihan kemasan 100g, 250g, dan 500g.
                     </p>
                   </div>
                   
                   {/* Q2 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Berapa lama waktu pengerjaan maklon kopi?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Bagaimana cara menjadi agen atau distributor resmi?</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Estimasi berkisar 7–14 hari kerja setelah berkas spesifikasi rasa, logo merek, dan kemasan foil disepakati bersama.
+                      Anda dapat menghubungi tim kami via WhatsApp atau Email untuk berdiskusi mengenai wilayah pemasaran, harga khusus grosir, serta syarat kerjasama distribusi eksklusif.
                     </p>
                   </div>
                   
                   {/* Q3 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Bagaimana proses pengiriman sampel produk?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Apakah calon mitra bisnis bisa mendapatkan sampel produk?</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Silakan hubungi admin WhatsApp kami untuk berdiskusi mengenai profile sangrai yang diinginkan. Sampel akan segera dikirimkan ke lokasi Anda.
+                      Tentu. Bagi calon agen, distributor, atau mitra retail skala besar, kami menyediakan sampel produk untuk uji cita rasa sebelum kesepakatan kerjasama ditandatangani.
                     </p>
                   </div>
                 </div>

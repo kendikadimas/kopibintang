@@ -47,7 +47,7 @@ export default function Kemitraan() {
         {/* Full-bleed background */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/production_gallery_3.png"
+            src="/images/partnership_retail_display.png"
             alt="Kopi Bintang Pringsewu — Kemitraan"
             fill
             priority

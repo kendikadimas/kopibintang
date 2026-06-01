@@ -9,22 +9,22 @@ import Button from '@/components/ui/Button';
 type TabKey = 'proses' | 'spesifikasi' | 'penyajian';
 
 const SPECIFICATIONS = [
-  { label: 'Kategori Produk',    value: 'Kopi Bubuk Retail & Grosir' },
-  { label: 'Jenis Kopi',         value: '100% Robusta Lampung' },
-  { label: 'Asal Biji Kopi',     value: 'Kec. Adiluwih, Pringsewu, Lampung' },
+  { label: 'Kategori Produk', value: 'Kopi Bubuk Retail & Grosir' },
+  { label: 'Jenis Kopi', value: '100% Robusta Lampung' },
+  { label: 'Asal Biji Kopi', value: 'Kec. Adiluwih, Pringsewu, Lampung' },
   { label: 'Metode Pasca Panen', value: 'Natural Process' },
-  { label: 'Roasting Profile',   value: 'Medium-Dark Roast' },
-  { label: 'Tingkat Gilingan',   value: 'Halus — Optimal untuk Tubruk' },
-  { label: 'Pilihan Kemasan',    value: 'Pouch Aluminium Foil (100g · 250g · 500g)' },
-  { label: 'Sertifikasi Mutu',   value: 'Higienis · Standar P-IRT / Halal' },
-  { label: 'Legalitas',          value: 'CV. Harapan Buah Hati Mandiri Tunggal' },
+  { label: 'Roasting Profile', value: 'Medium-Dark Roast' },
+  { label: 'Tingkat Gilingan', value: 'Halus — Optimal untuk Tubruk' },
+  { label: 'Pilihan Kemasan', value: 'Pouch Aluminium Foil (100g · 250g · 500g)' },
+  { label: 'Sertifikasi Mutu', value: 'Higienis · Standar P-IRT / Halal' },
+  { label: 'Legalitas', value: 'CV. Harapan Buah Hati Mandiri Tunggal' },
 ];
 
 const FLAVOR_PROFILE = [
-  { label: 'Body',      desc: 'Tebal & Mantap',       pct: 100, delay: '0ms'  },
-  { label: 'Aroma',     desc: 'Harum Cokelat Klasik', pct: 80,  delay: '80ms' },
-  { label: 'Keasaman',  desc: 'Sangat Rendah',        pct: 20,  delay: '160ms'},
-  { label: 'Kemanisan', desc: 'Petunjuk Karamel',     pct: 40,  delay: '240ms'},
+  { label: 'Body', desc: 'Tebal & Mantap', pct: 100, delay: '0ms' },
+  { label: 'Aroma', desc: 'Harum Cokelat Klasik', pct: 80, delay: '80ms' },
+  { label: 'Keasaman', desc: 'Sangat Rendah', pct: 20, delay: '160ms' },
+  { label: 'Kemanisan', desc: 'Petunjuk Karamel', pct: 40, delay: '240ms' },
 ];
 
 // const HIGHLIGHTS = [
@@ -35,31 +35,31 @@ const FLAVOR_PROFILE = [
 // ];
 
 const BREW_STEPS = [
-  { n: '01', title: 'Takar Bubuk Kopi',          body: 'Masukkan 10–12 gram kopi bubuk Bintang Pringsewu ke dalam cangkir saji.' },
-  { n: '02', title: 'Persiapkan Air Panas',       body: 'Panaskan air hingga mendidih, diamkan 30 detik agar suhu turun ke 90–95 °C.' },
+  { n: '01', title: 'Takar Bubuk Kopi', body: 'Masukkan 10–12 gram kopi bubuk Bintang Pringsewu ke dalam cangkir saji.' },
+  { n: '02', title: 'Persiapkan Air Panas', body: 'Panaskan air hingga mendidih, diamkan 30 detik agar suhu turun ke 90–95 °C.' },
   { n: '03', title: 'Penyeduhan Awal (Blooming)', body: 'Tuangkan ±150 ml air panas secara merata. Biarkan 30 detik tanpa diaduk.' },
-  { n: '04', title: 'Aduk & Endapkan',            body: 'Aduk merata, diamkan 3 menit agar ampas mengendap sempurna.' },
-  { n: '05', title: 'Nikmati Hangat',             body: 'Sajikan. Tambahkan gula atau susu sesuai selera tradisional Anda.' },
+  { n: '04', title: 'Aduk & Endapkan', body: 'Aduk merata, diamkan 3 menit agar ampas mengendap sempurna.' },
+  { n: '05', title: 'Nikmati Hangat', body: 'Sajikan. Tambahkan gula atau susu sesuai selera tradisional Anda.' },
 ];
 
 const TABS: { key: TabKey; label: string }[] = [
-  { key: 'proses',       label: 'Proses & Filosofi'      },
-  { key: 'spesifikasi',  label: 'Spesifikasi Teknis'     },
-  { key: 'penyajian',    label: 'Panduan Penyajian'      },
+  { key: 'proses', label: 'Proses & Filosofi' },
+  { key: 'spesifikasi', label: 'Spesifikasi Teknis' },
+  { key: 'penyajian', label: 'Panduan Penyajian' },
 ];
 
 const IMAGES = [
-  { src: '/images/product_fine_robusta.png', label: 'Kemasan Utama'    },
-  { src: '/images/product.png',              label: 'Tampilan Produk'   },
-  { src: '/images/production_gallery_1.png', label: 'Proses Roasting'   },
-  { src: '/images/production_gallery_2.png', label: 'Proses Pengemasan' },
+  { src: '/images/product_angle_front.png', label: 'Kemasan Utama' },
+  { src: '/images/product_angle_isometric.png', label: 'Tampilan Sudut' },
+  { src: '/images/product_angle_flatlay.png', label: 'Sajian Produk' },
+  { src: '/images/product_angle_detail.png', label: 'Detail Kemasan' },
 ];
 
 /* ─────────────────────────── COMPONENT ─────────────────────── */
 export default function ProdukDetail() {
-  const [activeImg, setActiveImg]   = useState(0);
-  const [activeTab, setActiveTab]   = useState<TabKey>('proses');
-  const galleryRef                  = useRef<HTMLDivElement>(null);
+  const [activeImg, setActiveImg] = useState(0);
+  const [activeTab, setActiveTab] = useState<TabKey>('proses');
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   const waRetailUrl = () => {
     const msg = `Halo Kopi Bintang Pringsewu, saya tertarik untuk membeli Kopi Bubuk Bintang Pringsewu (retail/konsumsi pribadi). Mohon informasi harga terbaru dan cara pemesanan. Terima kasih!`;
@@ -71,17 +71,18 @@ export default function ProdukDetail() {
 
       <section className="relative w-full min-h-[100dvh] bg-espresso overflow-hidden flex items-end pb-20 md:pb-28">
 
-        {/* Background product image — right half */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] pointer-events-none select-none">
-          <div className="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/80 to-transparent z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-espresso via-transparent to-espresso/60 z-10" />
+        {/* Background product image */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0">
           <Image
-            src="/images/product_fine_robusta.png"
+            src="/images/product_angle_isometric.png"
             alt="Kopi Bubuk Bintang Pringsewu"
             fill
             priority
-            className="object-cover object-center opacity-60"
+            className="object-cover object-center lg:object-[86%_center] opacity-60"
           />
+          {/* Smooth screen-wide horizontal and vertical gradients to avoid any hard edge */}
+          <div className="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/85 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-espresso via-transparent to-espresso/60 z-10" />
         </div>
 
         {/* Ambient glow blob */}
@@ -113,7 +114,7 @@ export default function ProdukDetail() {
                   className="!bg-caramel !border-caramel hover:!bg-cream hover:!border-cream hover:!text-bark min-h-[50px] px-8 shadow-xl hover:-translate-y-0.5 transition-all duration-300 gap-2 flex items-center"
                 >
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                   </svg>
                   Hubungi WhatsApp
                 </Button>
@@ -152,9 +153,7 @@ export default function ProdukDetail() {
                   alt={IMAGES[activeImg].label}
                   fill
                   priority={activeImg === 0}
-                  className={`object-contain p-6 md:p-10 transition-all duration-500 ease-out group-hover:scale-[1.04] animate-enter ${
-                    activeImg === 1 ? '-translate-x-[10%]' : ''
-                  }`}
+                  className="object-contain p-6 md:p-10 transition-all duration-500 ease-out group-hover:scale-[1.04] animate-enter"
                 />
 
                 {/* Label chip */}
@@ -170,11 +169,10 @@ export default function ProdukDetail() {
                     key={i}
                     onClick={() => setActiveImg(i)}
                     aria-label={img.label}
-                    className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 group/thumb ${
-                      i === activeImg
+                    className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 group/thumb ${i === activeImg
                         ? 'border-caramel ring-2 ring-caramel/20'
                         : 'border-fog hover:border-caramel/50 opacity-60 hover:opacity-100'
-                    }`}
+                      }`}
                   >
                     <Image
                       src={img.src}
@@ -220,7 +218,7 @@ export default function ProdukDetail() {
               <div className="flex flex-col gap-5 bg-gradient-to-br from-white to-parchment/30 border border-bark/10 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-500 hover:border-caramel/30 hover:shadow-md relative overflow-hidden">
                 {/* Subtle background glow */}
                 <div className="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-caramel/5 blur-lg pointer-events-none" />
-                
+
                 <span className="font-body font-bold text-[10px] uppercase tracking-[0.2em] text-espresso relative z-10">
                   Profil Cita Rasa
                 </span>
@@ -276,7 +274,7 @@ export default function ProdukDetail() {
                     className="w-full !bg-caramel !border-caramel hover:!bg-espresso hover:!border-espresso min-h-[50px] shadow-md gap-2 flex items-center justify-center transition-all duration-300"
                   >
                     <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
-                      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                     </svg>
                     Pesan via WhatsApp
                   </Button>
@@ -326,11 +324,10 @@ export default function ProdukDetail() {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`tab-underline ${activeTab === tab.key ? 'active' : ''} font-body text-xs sm:text-sm font-semibold tracking-wide px-5 py-4 whitespace-nowrap transition-colors duration-200 border-b-2 ${
-                    activeTab === tab.key
+                  className={`tab-underline ${activeTab === tab.key ? 'active' : ''} font-body text-xs sm:text-sm font-semibold tracking-wide px-5 py-4 whitespace-nowrap transition-colors duration-200 border-b-2 ${activeTab === tab.key
                       ? 'text-caramel border-caramel'
                       : 'text-cream/40 border-transparent hover:text-cream/70'
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -373,12 +370,12 @@ export default function ProdukDetail() {
                   {/* Process milestones */}
                   <div className="flex flex-col divide-y divide-white/8">
                     {[
-                      { step: 'Panen',      desc: 'Seleksi buah merah terbaik' },
-                      { step: 'Natural',    desc: 'Penjemuran alami di bawah sinar matahari' },
-                      { step: 'Hulling',    desc: 'Pemisahan kulit tanduk secara cermat' },
-                      { step: 'Roasting',   desc: 'Medium-dark, suhu terkontrol presisi' },
-                      { step: 'Grinding',   desc: 'Halus — optimal untuk tubruk' },
-                      { step: 'Packaging',  desc: 'Dikemas higienis dalam pouch foil kedap udara' },
+                      { step: 'Panen', desc: 'Seleksi buah merah terbaik' },
+                      { step: 'Natural', desc: 'Penjemuran alami di bawah sinar matahari' },
+                      { step: 'Hulling', desc: 'Pemisahan kulit tanduk secara cermat' },
+                      { step: 'Roasting', desc: 'Medium-dark, suhu terkontrol presisi' },
+                      { step: 'Grinding', desc: 'Halus — optimal untuk tubruk' },
+                      { step: 'Packaging', desc: 'Dikemas higienis dalam pouch foil kedap udara' },
                     ].map((m) => (
                       <div key={m.step} className="flex items-center gap-4 py-3">
                         <span className="font-body text-[10px] font-bold uppercase tracking-wider text-caramel w-20 shrink-0">{m.step}</span>
@@ -476,9 +473,9 @@ export default function ProdukDetail() {
                 {/* Icon area — retail */}
                 <div className="w-11 h-11 rounded-xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 0 1-8 0" />
                   </svg>
                 </div>
                 <div className="flex flex-col gap-1">
@@ -496,7 +493,7 @@ export default function ProdukDetail() {
 
                 {/* Feature list */}
                 <ul className="flex flex-col gap-2 mt-1">
-                  {['Pilihan kemasan 100g · 250g · 500g', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
+                  {['Pilihan kemasan 100g · 250g · ', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
                     <li key={f} className="flex items-center gap-2 font-body text-xs text-espresso/70">
                       <span className="w-3 h-px bg-caramel shrink-0" />
                       {f}
@@ -516,7 +513,7 @@ export default function ProdukDetail() {
                   className="w-full !bg-caramel !border-caramel hover:!bg-espresso hover:!border-espresso shadow-md transition-all duration-300 gap-2 flex items-center justify-center"
                 >
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                   </svg>
                   Hubungi WhatsApp
                 </Button>
@@ -532,10 +529,10 @@ export default function ProdukDetail() {
                 {/* Icon area — partnership */}
                 <div className="w-11 h-11 rounded-xl bg-espresso/8 border border-espresso/20 flex items-center justify-center text-bark group-hover:scale-110 group-hover:bg-espresso group-hover:text-cream transition-all duration-500 shadow-inner shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
                 <div className="flex flex-col gap-1">

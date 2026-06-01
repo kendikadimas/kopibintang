@@ -21,11 +21,11 @@ export default function Navbar() {
     <div className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 z-50">
       <header
         className={`
-          rounded-full px-6 md:px-8 flex items-center justify-between
+          rounded-full px-5 md:px-8 flex items-center justify-between
           transition-all duration-300 ease-out border
           ${isScrolled
-            ? 'bg-bark/95 backdrop-blur-lg py-3.5 shadow-[0_12px_40px_-6px_rgba(26,16,8,0.45)] border-white/10'
-            : 'bg-bark/85 backdrop-blur-md py-5 shadow-[0_6px_24px_-4px_rgba(26,16,8,0.25)] border-white/5'}
+            ? 'bg-bark/95 backdrop-blur-lg py-2.5 md:py-3.5 shadow-[0_12px_40px_-6px_rgba(26,16,8,0.45)] border-white/10'
+            : 'bg-bark/85 backdrop-blur-md py-3 md:py-5 shadow-[0_6px_24px_-4px_rgba(26,16,8,0.25)] border-white/5'}
         `}
       >
         {/* Logo */}

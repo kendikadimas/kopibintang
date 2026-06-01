@@ -46,8 +46,7 @@ export default function Home() {
 
 
 
-            {/* Headline */}
-            <h1 className="font-display text-[1.55rem] min-[375px]:text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[4.2rem] tracking-wide text-cream leading-[1.15] sm:leading-[1.1] lg:leading-[1.05]">
+            <h1 className="font-display text-[1.75rem] min-[375px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.2rem] tracking-wide text-cream leading-[1.15] sm:leading-[1.1] lg:leading-[1.05]">
               Dari Tanah Lampung,<br />
               untuk Secangkir <em className="not-italic text-caramel">Tak Terlupakan</em>
             </h1>
