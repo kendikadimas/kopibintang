@@ -7,6 +7,15 @@ import Button from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: 'Peluang Kemitraan & Keagenan Distributor Kopi — Kopi Bintang Pringsewu',
   description: 'Program kemitraan CV. Harapan Buah Hati Mandiri Tunggal untuk distribusi Kopi Bintang Pringsewu Lampung. Keuntungan menarik, pasokan stabil, wilayah eksklusif.',
+  keywords: [
+    'kopi bubuk lampung',
+    'kopi bubuk',
+    'kopi bubuk bintang pringsewu',
+    'kopi bintang',
+    'kemitraan distributor kopi',
+    'agen kopi robusta',
+    'grosir kopi pringsewu'
+  ],
 };
 
 /* ── Icon SVGs ───────────────────────────────────────────────── */

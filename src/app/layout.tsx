@@ -26,7 +26,17 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_META.name}`,
   },
   description: SITE_META.description,
-  keywords: ["kopi bintang", "kopi robusta lampung", "pringsewu", "kopi bintang pringsewu", "cv harapan buah hati mandiri tunggal", "kemitraan kopi", "distributor kopi"],
+  keywords: [
+    "kopi bubuk lampung",
+    "kopi bubuk",
+    "kopi bubuk bintang pringsewu",
+    "kopi bintang",
+    "kopi robusta lampung",
+    "pringsewu",
+    "cv harapan buah hati mandiri tunggal",
+    "kemitraan kopi",
+    "distributor kopi"
+  ],
 };
 
 export default function RootLayout({
