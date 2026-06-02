@@ -77,14 +77,21 @@ export default function Home() {
           </div>
 
           {/* RIGHT: Editorial Image Showcase (Fully Responsive) */}
-          <div className="flex-1 flex items-center justify-center relative w-full max-w-[300px] min-[375px]:max-w-xs sm:max-w-sm lg:max-w-none">
-            {/* Product image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/bintang.png"
-              alt="Produk kopi Kopi Bintang Pringsewu"
-              className="relative z-20 w-[90%] sm:w-[60%] lg:w-[85%] h-auto object-contain scale-[1.08] lg:scale-[1.25] transition-transform duration-500 hover:scale-[1.12] lg:hover:scale-[1.3]"
-            />
+          <div className="flex-1 flex items-center justify-center relative w-full max-w-[300px] min-[375px]:max-w-xs sm:max-w-sm lg:max-w-[420px] xl:max-w-[460px] lg:my-0 my-8 group">
+            {/* Decorative back offset border card for depth */}
+            <div className="absolute inset-4 -right-2 -bottom-4 border-2 border-caramel/30 rounded-3xl z-0 transform translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500" />
+            
+            {/* Main image card container */}
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-parchment/10 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] z-10 transition-transform duration-500 hover:-translate-y-1 hover:border-caramel/30">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/fotoprodukhero.webp"
+                alt="Produk Kopi Bintang Pringsewu"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              {/* Soft overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#120B05]/40 via-transparent to-transparent pointer-events-none" />
+            </div>
           </div>
 
         </div>

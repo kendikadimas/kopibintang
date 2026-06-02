@@ -18,7 +18,7 @@ export const CONTACT = {
 
 export const PRODUCT = {
   name: 'Kopi Bubuk Bintang Pringsewu',
-  tagline: 'Kopi lokal berkualitas konsisten untuk pasar retail yang menuntut yang terbaik.',
+  tagline: 'Kopi lokal berkualitas dan konsisten sebagai pemasok pasar retail.',
   description: `Kopi Bubuk Bintang Pringsewu dibuat dari biji kopi pilihan yang tumbuh di tanah subur Lampung. Melalui proses roasting modern yang terstandarisasi, setiap kemasan menghadirkan konsistensi rasa, aroma khas kopi Indonesia, dan warna seduhan yang memanjakan indra.
 
 Diproses secara higienis di fasilitas kami di Desa Tunggul Pawenang, Adiluwih — setiap batch kami jaga kualitasnya agar kepuasan konsumen tidak pernah berkompromi.`,
