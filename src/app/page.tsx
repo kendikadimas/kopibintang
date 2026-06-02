@@ -120,17 +120,16 @@ export default function Home() {
       <SectionWrapper background="dark" className="!bg-bark" paddingY="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Simple Product Image with Latte Background */}
-          <div className="relative aspect-square flex items-center justify-center group py-8 lg:py-0 w-full max-w-lg mx-auto">
-            {/* Solid Latte colored circle background */}
-            <div className="absolute top-1/2 left-1/2 lg:left-[40%] -translate-x-1/2 -translate-y-1/2 w-[80%] lg:w-[85%] h-[80%] lg:h-[85%] bg-[#C8B092] rounded-full transition-transform duration-700 group-hover:scale-105" />
-            
+          {/* Product Image Card */}
+          <div className="relative aspect-[3/4] w-full max-w-sm lg:max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
             <Image
-              src="/images/product.png"
+              src="/images/produkkopi.webp"
               alt={PRODUCT.name}
               fill
-              className="object-contain relative z-10 -translate-x-[12%] lg:-translate-x-[20%] scale-[1.1] lg:scale-[1.45] transition-transform duration-700 ease-out group-hover:scale-[1.15] lg:group-hover:scale-150"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
+            {/* Ambient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#120B05]/30 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Simple Text Section */}
