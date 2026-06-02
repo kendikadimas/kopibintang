@@ -337,7 +337,7 @@ export default function TentangKamiClient() {
               </h2>
 
               <p className="font-body text-xs sm:text-sm text-cream/70 leading-[1.8] max-w-xl mx-auto font-light">
-                Bergabunglah bersama jaringan keagenan dan distribusi Kopi Bintang Pringsewu. Dapatkan manfaat eksklusivitas wilayah pemasaran, harga khusus grosir, serta jaminan ketersediaan stok produk kopi Robusta Lampung yang konsisten.
+                Bergabunglah bersama jaringan keagenan dan distribusi Kopi Bintang Pringsewu. Dapatkan manfaat eksklusivitas wilayah pemasaran, harga khusus, serta jaminan ketersediaan stok produk kopi Robusta Lampung yang konsisten.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full sm:w-auto">

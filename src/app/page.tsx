@@ -152,9 +152,7 @@ export default function Home() {
             </p>
 
             <p className="font-body text-sm text-cream/70 leading-[1.8] font-light max-w-md">
-              Diproses secara higienis oleh {SITE_META.company} di fasilitas kami di {CONTACT.addressShort}. Setiap
-              batch dijaga kualitasnya demi konsistensi rasa kopi Lampung murni klasik yang
-              tebal dan memanjakan indra.
+              Kopi Bintang Pringsewu adalah usaha mikro, kecil, dan menengah (UMKM) yang bergerak dibidang produksi dan penjualan kopi bubuk retail berkualitas premium. Kami menghadirkan kopi pilihan dari biji kopi terbaik Lampung yang diproses secara higienis dengan teknik roasting modern untuk menghasilkan aroma, rasa yang autentik.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-2">

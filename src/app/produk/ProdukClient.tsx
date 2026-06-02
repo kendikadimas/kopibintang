@@ -15,7 +15,7 @@ const SPECIFICATIONS = [
   { label: 'Metode Pasca Panen', value: 'Natural Process' },
   { label: 'Roasting Profile', value: 'Medium-Dark Roast' },
   { label: 'Tingkat Gilingan', value: 'Halus — Optimal untuk Tubruk' },
-  { label: 'Pilihan Kemasan', value: 'Pouch Aluminium Foil (100g · 250g · 500g)' },
+  { label: 'Pilihan Kemasan', value: 'Kemasan 100g · 200g)' },
   { label: 'Sertifikasi Mutu', value: 'Higienis · Standar P-IRT / Halal' },
   { label: 'Legalitas', value: 'CV. Harapan Buah Hati Mandiri Tunggal' },
 ];
@@ -35,10 +35,10 @@ const FLAVOR_PROFILE = [
 // ];
 
 const BREW_STEPS = [
-  { n: '01', title: 'Takar Bubuk Kopi', body: 'Masukkan 10–12 gram kopi bubuk Bintang Pringsewu ke dalam cangkir saji.' },
+  { n: '01', title: 'Takar Bubuk Kopi', body: 'Masukkan 6-8 gram kopi bubuk Bintang Pringsewu ke dalam cangkir saji.' },
   { n: '02', title: 'Persiapkan Air Panas', body: 'Panaskan air hingga mendidih, diamkan 30 detik agar suhu turun ke 90–95 °C.' },
   { n: '03', title: 'Penyeduhan Awal (Blooming)', body: 'Tuangkan ±150 ml air panas secara merata. Biarkan 30 detik tanpa diaduk.' },
-  { n: '04', title: 'Aduk & Endapkan', body: 'Aduk merata, diamkan 3 menit agar ampas mengendap sempurna.' },
+  { n: '04', title: 'Aduk & Endapkan', body: 'Aduk merata, diamkan 3-5 menit agar ampas mengendap sempurna.' },
   { n: '05', title: 'Nikmati Hangat', body: 'Sajikan. Tambahkan gula atau susu sesuai selera tradisional Anda.' },
 ];
 
@@ -102,7 +102,7 @@ export default function ProdukDetail() {
 
             {/* Sub */}
             <p className="font-body text-sm md:text-base text-cream/65 leading-[1.8] mb-8 max-w-sm">
-              100% Robusta Lampung murni. Medium-dark roast dengan karakter earthy,
+              Medium-dark roast dengan karakter earthy,
               dark chocolate, dan acidity rendah yang khas.
             </p>
 
@@ -208,10 +208,7 @@ export default function ProdukDetail() {
 
               {/* Description */}
               <p className="font-body text-sm sm:text-base text-espresso/70 leading-[1.85] font-light border-l-2 border-caramel/40 pl-4">
-                Terbuat dari 100% biji kopi Robusta Lampung pilihan petani lokal,
-                diproses secara modern di Desa Tunggul Pawenang. Setiap batch dijaga
-                konsistensinya untuk menghadirkan karakter earthy, dark chocolate,
-                dan pahit klasik Lampung yang tak terlupakan.
+                Berdiri dengan semangat mengangkat kekayaan kopi lokal Indonesia, kami percaya bahwa secangkir kopi bukan hanya minuman. Tetapi juga pengalaman dan budaya yang menyatukan banyak cerita. Inspirasi ini sejalan dengan banyak produsen kopi lokal Indonesia yang menonjolkan kualitas roasting, konsistensi rasa, dan hubungan erat dengan petani kopi lokal
               </p>
 
               {/* ── Flavor Profile Visual Bars ── */}
@@ -250,7 +247,7 @@ export default function ProdukDetail() {
                   Ketersediaan Kemasan Pouch
                 </span>
                 <div className="flex gap-3">
-                  {['100g', '250g', '500g'].map((size) => (
+                  {['100g', '250g'].map((size) => (
                     <div
                       key={size}
                       className="flex-1 bg-parchment border border-fog rounded-xl py-3 text-center font-body font-bold text-sm text-espresso tracking-wide hover:border-caramel hover:bg-caramel/8 transition-colors duration-200 cursor-default"
@@ -375,7 +372,7 @@ export default function ProdukDetail() {
                       { step: 'Hulling', desc: 'Pemisahan kulit tanduk secara cermat' },
                       { step: 'Roasting', desc: 'Medium-dark, suhu terkontrol presisi' },
                       { step: 'Grinding', desc: 'Halus — optimal untuk tubruk' },
-                      { step: 'Packaging', desc: 'Dikemas higienis dalam pouch foil kedap udara' },
+                      { step: 'Packaging', desc: 'Dikemas secara higienis' },
                     ].map((m) => (
                       <div key={m.step} className="flex items-center gap-4 py-3">
                         <span className="font-body text-[10px] font-bold uppercase tracking-wider text-caramel w-20 shrink-0">{m.step}</span>
@@ -487,13 +484,13 @@ export default function ProdukDetail() {
                   </h3>
                 </div>
                 <p className="font-body text-sm text-espresso/65 leading-relaxed font-light">
-                  Nikmati rasa autentik robusta Lampung murni di rumah Anda.
+                  Nikmati rasa autentik robusta Lampung di rumah Anda.
                   Pengiriman langsung ke seluruh wilayah Indonesia via logistik terpercaya.
                 </p>
 
                 {/* Feature list */}
                 <ul className="flex flex-col gap-2 mt-1">
-                  {['Pilihan kemasan 100g · 250g · ', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
+                  {['Pilihan kemasan 100g · 200g · ', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
                     <li key={f} className="flex items-center gap-2 font-body text-xs text-espresso/70">
                       <span className="w-3 h-px bg-caramel shrink-0" />
                       {f}

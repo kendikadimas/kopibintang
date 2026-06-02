@@ -104,11 +104,11 @@ export const COMPANY_VALUES = [
 ];
 
 export const ABOUT_COMPANY = {
-  vision: 'Menjadi merek kopi lokal Lampung yang dikenal kualitas dan konsistensinya di seluruh Indonesia.',
+  vision: 'Menjadikan kopi kami sebagai standar kebahagiaan harian Masyarakat melalui produk retail berkualitas prima yang mudah dijangkau.',
   missions: [
-    'Menghadirkan kopi bubuk berkualitas dari biji pilihan petani lokal Lampung.',
-    'Membangun jaringan distribusi yang kuat dan saling menguntungkan bagi semua pihak.',
-    'Menjaga standar produksi yang higienis, modern, dan berkelanjutan.',
+    'Menyajikan produk kopi retail berkualitas tinggi melalui proses pengolahan yang higienis dan mutu ketat.',
+    'Membangun ekosistem bisnis yang sehat bersama para petani lokal dan jaringan distributor demi kesejahteraan bersama.',
+    'Terus berinovasi dalam menyajikan produk yang relevan dengan gaya hidup dinamis konsumen saat ini. ',
   ],
   story: `Kopi Bintang Pringsewu lahir dari semangat mengangkat kekayaan kopi lokal Indonesia ke pasar yang lebih luas. Berlokasi di Desa Tunggul Pawenang, Kecamatan Adiluwih, Kabupaten Pringsewu — kami berakar pada kearifan lokal dan bergerak dengan standar modern.
 

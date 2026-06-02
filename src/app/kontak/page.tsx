@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { CONTACT, SITE_META } from '@/lib/constants';
 import Button from '@/components/ui/Button';
 import ContactForm from '@/components/sections/ContactForm';
+import FAQSection from '@/components/sections/FAQSection';
 
 export const metadata: Metadata = {
   title: 'Hubungi Kami — Layanan Konsumen & Alamat Kantor',
@@ -195,7 +196,7 @@ export default function Kontak() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          SECTION 3 — FORM & TANYA JAWAB (Parchment, Two-Column)
+          SECTION 3 — FORM & OPERASIONAL (Parchment, Two-Column)
       ══════════════════════════════════════════════════════════ */}
       <section className="w-full bg-parchment py-20 md:py-28 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -206,34 +207,35 @@ export default function Kontak() {
               <ContactForm />
             </div>
 
-            {/* Info & FAQ Accordion Column (Right) */}
+            {/* Info Column (Right) */}
             <div className="lg:col-span-5 flex flex-col justify-center items-start gap-6 text-left">
               <div className="bg-white border border-fog/50 p-8 rounded-3xl shadow-md flex flex-col gap-6 w-full text-left">
-                <span className="font-mono text-[9px] uppercase tracking-widest text-caramel font-bold block">Tanya Jawab Ringkas</span>
-                <h3 className="font-display text-2xl font-semibold text-espresso">Panduan Informasi</h3>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-caramel font-bold block">Detail Operasional</span>
+                <h3 className="font-display text-2xl font-semibold text-espresso">Kantor & Workshop</h3>
                 
-                <div className="flex flex-col gap-4 mt-2 divide-y divide-fog/20">
-                  {/* Q1 */}
+                <div className="flex flex-col gap-5 mt-2 divide-y divide-fog/20">
+                  {/* Item 1 */}
                   <div className="flex flex-col gap-1.5 pt-4 first:pt-0">
-                    <strong className="font-display text-sm text-espresso font-semibold">Bagaimana cara membeli kopi untuk konsumsi pribadi?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Alamat Workshop Utama</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Pemesanan eceran untuk retail/konsumsi pribadi dapat dilakukan langsung melalui WhatsApp kami. Kami melayani pengiriman ke seluruh Indonesia dengan pilihan kemasan 100g, 250g, dan 500g.
+                      {CONTACT.address}
                     </p>
                   </div>
                   
-                  {/* Q2 */}
+                  {/* Item 2 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Bagaimana cara menjadi agen atau distributor resmi?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Jam Operasional</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Anda dapat menghubungi tim kami via WhatsApp atau Email untuk berdiskusi mengenai wilayah pemasaran, harga khusus grosir, serta syarat kerjasama distribusi eksklusif.
+                      Senin – Sabtu: 08:00 – 17:00 WIB<br />
+                      Minggu & Hari Libur Nasional: Tutup
                     </p>
                   </div>
                   
-                  {/* Q3 */}
+                  {/* Item 3 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Apakah calon mitra bisnis bisa mendapatkan sampel produk?</strong>
+                    <strong className="font-display text-sm text-espresso font-semibold">Komitmen Pelayanan</strong>
                     <p className="font-body text-xs text-muted leading-relaxed font-light">
-                      Tentu. Bagi calon agen, distributor, atau mitra retail skala besar, kami menyediakan sampel produk untuk uji cita rasa sebelum kesepakatan kerjasama ditandatangani.
+                      Sebagai produsen terpercaya, CV. Harapan Buah Hati Mandiri Tunggal berkomitmen melayani pesanan retail dan pengiriman sampel untuk calon distributor secara profesional dan higienis.
                     </p>
                   </div>
                 </div>
@@ -243,7 +245,7 @@ export default function Kontak() {
                     {SITE_META.company}
                   </span>
                   <span className="text-xs text-muted leading-relaxed font-light">
-                    Fasilitas sangrai & pengemasan kami beroperasi dengan izin P-IRT resmi dan sertifikasi Halal.
+                    Sertifikasi P-IRT resmi dan Halal terdaftar.
                   </span>
                 </div>
               </div>
@@ -252,6 +254,9 @@ export default function Kontak() {
           </div>
         </div>
       </section>
+
+      {/* ─── SECTION 4: FAQ SECTION ─────────────────────────────────── */}
+      <FAQSection />
 
       {/* ─── SECTION 4: PETA LOKASI ────────────────────────────────────── */}
       <section id="map" className="w-full bg-cream py-20 md:py-28 lg:py-32">
