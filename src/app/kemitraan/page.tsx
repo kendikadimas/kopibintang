@@ -5,8 +5,8 @@ import { CONTACT, PARTNERSHIP_BENEFITS, PARTNERSHIP_STEPS } from '@/lib/constant
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'Peluang Kemitraan & Keagenan Distributor Kopi — Kopi Bintang Pringsewu',
-  description: 'Program kemitraan CV. Harapan Buah Hati Mandiri Tunggal untuk distribusi Kopi Bintang Pringsewu Lampung. Keuntungan menarik, pasokan stabil, wilayah eksklusif.',
+  title: 'Kemitraan Distribusi Kopi Bintang Pringsewu Lampung',
+  description: 'Bergabung sebagai distributor resmi Kopi Bintang Pringsewu. Dapatkan eksklusivitas wilayah, harga khusus, dan dukungan logistik dari CV. Harapan Buah Hati Mandiri Tunggal.',
   keywords: [
     'kopi bubuk lampung',
     'kopi bubuk',

@@ -7,8 +7,8 @@ import ContactForm from '@/components/sections/ContactForm';
 import FAQSection from '@/components/sections/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'Hubungi Kami — Layanan Konsumen & Alamat Kantor',
-  description: 'Hubungi tim Kopi Bintang Pringsewu, CV. Harapan Buah Hati Mandiri Tunggal. Informasi kontak WhatsApp, email, dan peta lokasi workshop kami di Lampung.',
+  title: 'Hubungi Kopi Bintang Pringsewu — Kontak & Pemesanan',
+  description: 'Hubungi Kopi Bintang Pringsewu untuk pemesanan retail & grosir kopi robusta Lampung asli. Lokasi kami di Adiluwih, Pringsewu. Respon cepat via WhatsApp.',
   keywords: [
     'kopi bubuk lampung',
     'kopi bubuk',

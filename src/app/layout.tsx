@@ -90,6 +90,31 @@ export default function RootLayout({
         className={`${calistoga.variable} ${outfit.variable} h-full antialiased`}
       >
       <body className="min-h-full flex flex-col bg-cream text-ink font-body">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Kopi Bintang Pringsewu",
+              "legalName": "CV. Harapan Buah Hati Mandiri Tunggal",
+              "url": "https://kopibintangpringsewu-official.com",
+              "telephone": "+6282377998183",
+              "email": "harapan.mandiritunggal.cv@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Desa Tunggul Pawenang, RT.004/RW.002, Kec. Adiluwih",
+                "addressLocality": "Pringsewu",
+                "addressRegion": "Lampung",
+                "postalCode": "35674",
+                "addressCountry": "ID"
+              },
+              "openingHours": "Mo-Sa 08:00-17:00",
+              "priceRange": "Rp15.000 - Rp65.000",
+              "image": "https://kopibintangpringsewu-official.com/images/product.webp"
+            })
+          }}
+        />
         <Navbar />
         <main className="flex-grow">
           {children}

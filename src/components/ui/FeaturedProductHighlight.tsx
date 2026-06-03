@@ -73,7 +73,7 @@ export default function FeaturedProductHighlight() {
 
       {/* CTA Button */}
       <div className="flex justify-center mt-16 lg:mt-24 relative z-10">
-        <Button variant="primary" href="/produk" className="px-10 py-4 text-sm cursor-pointer shadow-2xl hover:-translate-y-1 transition-transform">
+        <Button variant="primary" href="/produk/" className="px-10 py-4 text-sm cursor-pointer shadow-2xl hover:-translate-y-1 transition-transform">
           Lihat Produk Lengkap
         </Button>
       </div>

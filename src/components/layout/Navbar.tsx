@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { NAV_LINKS } from '@/lib/constants';
+import { NAV_LINKS, CONTACT } from '@/lib/constants';
 import { Coffee } from 'lucide-react';
 
 export default function Navbar() {
@@ -74,8 +74,10 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/kontak"
+          <a
+            href={CONTACT.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               bg-white text-bark px-5 py-2 rounded-full
               font-body text-[13px] font-semibold tracking-wide
@@ -84,7 +86,7 @@ export default function Navbar() {
             "
           >
             Hubungi Kami
-          </Link>
+          </a>
         </div>
 
         {/* Mobile hamburger — min 44×44px touch target */}
@@ -130,8 +132,10 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Link
-            href="/kontak"
+          <a
+            href={CONTACT.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMobileOpen(false)}
             className="
               bg-white text-bark text-center px-6 py-3 mt-4 mb-1 rounded-full
@@ -139,7 +143,7 @@ export default function Navbar() {
             "
           >
             Hubungi Kami
-          </Link>
+          </a>
         </nav>
       </div>
     </div>

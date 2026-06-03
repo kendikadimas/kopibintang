@@ -492,7 +492,7 @@ export default function HomepageFAQ() {
         {/* Small Bottom CTA anchor linking to the full Kontak page for more questions */}
         {/* <div className="flex justify-center mt-8">
           <a 
-            href="/kontak" 
+            href="/kontak/" 
             className="group inline-flex items-center gap-2.5 font-body font-semibold text-xs tracking-widest uppercase text-espresso/70 hover:text-caramel transition-colors duration-300"
           >
             Lihat Semua FAQ & Kontak Detail

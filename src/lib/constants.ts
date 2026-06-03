@@ -23,7 +23,7 @@ export const PRODUCT = {
 Diproses secara higienis di fasilitas kami di Desa Tunggul Pawenang, Adiluwih — setiap batch kami jaga kualitasnya agar kepuasan konsumen tidak pernah berkompromi.`,
   specs: [
     { label: 'Nama Produk', value: 'Kopi Bubuk Bintang Pringsewu' },
-    { label: 'Kemasan', value: 'Aluminium Foil Bag (100g, 250g, 500g)' },
+    { label: 'Kemasan', value: '100g, 200g' },
     { label: 'Jenis', value: 'Murni Robusta Lampung (Fine Robusta)' },
     { label: 'Produksi', value: 'CV. Harapan Buah Hati Mandiri Tunggal' },
     { label: 'Asal', value: 'Adiluwih, Pringsewu, Lampung' },
@@ -116,8 +116,8 @@ Di bawah naungan CV. Harapan Buah Hati Mandiri Tunggal, kami hadir sebagai UMKM 
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Produk', href: '/produk' },
-  { label: 'Kemitraan', href: '/kemitraan' },
-  { label: 'Tentang Kami', href: '/tentang-kami' },
-  { label: 'Kontak', href: '/kontak' },
+  { label: 'Produk', href: '/produk/' },
+  { label: 'Kemitraan', href: '/kemitraan/' },
+  { label: 'Tentang Kami', href: '/tentang-kami/' },
+  { label: 'Kontak', href: '/kontak/' },
 ];

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { SITE_META, CONTACT, PILLARS, PRODUCT } from '@/lib/constants';
 import Button from '@/components/ui/Button';
 import SectionWrapper from '@/components/ui/SectionWrapper';
@@ -8,6 +9,11 @@ import BenefitItem from '@/components/ui/BenefitItem';
 import GalleryGrid from '@/components/ui/GalleryGrid';
 import DeliveryCarousel from '@/components/ui/DeliveryCarousel';
 import HomepageFAQ from '@/components/sections/HomepageFAQ';
+
+export const metadata: Metadata = {
+  title: 'Kopi Bintang Pringsewu — Kopi Bubuk Lampung Pilihan',
+  description: 'Kopi bubuk robusta Lampung dari petani lokal Adiluwih Pringsewu. Kemasan 100g & 200g, diproses higienis, cocok untuk retail & distributor. Hubungi kami via WhatsApp!',
+};
 
 const PILLAR_ICONS = [
   // Leaf / Biji Kopi
@@ -54,21 +60,21 @@ export default function Home() {
 
             {/* Body copy */}
             <p className="font-body text-xs sm:text-sm md:text-base text-cream/70 max-w-sm leading-[1.7] mt-1 font-light">
-              {SITE_META.description}
+              Kopi Bintang Pringsewu — kopi bubuk robusta Lampung pilihan dari Adiluwih, Pringsewu. Diproses higienis, menghadirkan cita rasa autentik dan konsisten untuk retail & distributor.
             </p>
 
             {/* CTA row */}
             <div className="flex flex-wrap gap-3 pt-2">
               <Button 
                 variant="primary" 
-                href="/produk" 
+                href="/produk/" 
                 className="px-6 py-3 text-xs sm:px-8 sm:py-3.5 sm:text-sm !bg-caramel !border-caramel hover:!bg-cream hover:!border-cream hover:!text-bark"
               >
                 Lihat Produk Kami
               </Button>
               <Button 
                 variant="outline" 
-                href="/kontak" 
+                href="/kontak/" 
                 className="px-6 py-3 text-xs sm:px-8 sm:py-3.5 sm:text-sm !border-white/30 !text-cream hover:!bg-white/10 hover:!border-white/50"
               >
                 Hubungi Kami
@@ -160,14 +166,14 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 mt-2">
               <Button 
                 variant="primary" 
-                href="/kontak" 
+                href="/kontak/" 
                 className="!bg-caramel !border-caramel !text-cream hover:!bg-cream hover:!border-cream hover:!text-bark min-h-[44px] px-8 cursor-pointer shadow-lg hover:-translate-y-0.5 transition-all"
               >
                 Beli Sekarang
               </Button>
               <Button 
                 variant="outline" 
-                href="/produk" 
+                href="/produk/" 
                 className="!border-cream !text-cream hover:!bg-cream hover:!text-bark min-h-[44px] px-8 cursor-pointer transition-colors"
               >
                 Lihat Detail Produk
@@ -195,7 +201,7 @@ export default function Home() {
               Jika Anda mencari produk kopi dengan demand tinggi dan dukungan rantai pasok yang stabil, Kopi Bintang Pringsewu kini membuka peluang distribusi eksklusif untuk wilayah Anda. Dengan kapasitas produksi yang progresif, kami siap mendukung stok retail Anda tanpa kendala.
             </p>
 
-            <Button variant="primary" href="/kemitraan" className="mt-2 min-h-[44px] cursor-pointer">
+            <Button variant="primary" href="/kemitraan/" className="mt-2 min-h-[44px] cursor-pointer">
               Pelajari Kemitraan
             </Button>
           </div>
@@ -223,6 +229,15 @@ export default function Home() {
 
       {/* ─── SECTION 5: FAQ SECTION ────────────────────────────────────── */}
       <HomepageFAQ />
+
+      {/* ─── SECTION 5.5: SEO BRIEF ────────────────────────────────────── */}
+      <SectionWrapper background="cream" paddingY="sm" className="border-t border-fog/10">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <p className="font-body text-xs sm:text-sm text-ink/60 leading-[1.8] font-light">
+            <strong>Kopi Bintang Pringsewu</strong> adalah produsen <strong>kopi bubuk Lampung</strong> pilihan dari biji robusta Pringsewu berkualitas tinggi. Diproduksi secara higienis di Adiluwih, Kab. Pringsewu, Lampung oleh <strong>CV. Harapan Buah Hati Mandiri Tunggal</strong>, setiap kemasan <strong>kopi bintang</strong> menghadirkan cita rasa autentik <strong>kopi Lampung</strong> yang konsisten untuk pasar retail & kemitraan distributor di seluruh Indonesia.
+          </p>
+        </div>
+      </SectionWrapper>
 
       {/* ─── SECTION 6: CTA (Premium Card Layout) ────────────────────── */}
       <SectionWrapper background="cream" paddingY="lg" className="text-center">
@@ -256,14 +271,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4 w-full sm:w-auto">
               <Button 
                 variant="primary" 
-                href="/kontak" 
+                href="/kontak/" 
                 className="w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm !bg-caramel !border-caramel !text-espresso hover:!bg-cream hover:!border-cream hover:!text-espresso shadow-lg hover:shadow-caramel/10 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Hubungi Kami Sekarang
               </Button>
               <Button 
                 variant="outline" 
-                href="/kemitraan" 
+                href="/kemitraan/" 
                 className="w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm !border-white/15 !text-cream hover:!bg-white/5 hover:!border-white/30 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Pelajari Kemitraan

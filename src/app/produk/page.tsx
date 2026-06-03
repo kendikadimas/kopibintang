@@ -4,7 +4,7 @@ import ProdukClient from './ProdukClient';
 
 export const metadata: Metadata = {
   title: 'Kopi Bubuk Bintang Pringsewu — Robusta Lampung Premium',
-  description: 'Beli Kopi Bubuk Bintang Pringsewu, kopi bubuk robusta Lampung pilihan petani lokal. Diproses secara higienis, rasa klasik tebal, aroma cokelat manis.',
+  description: 'Beli Kopi Bubuk Bintang Pringsewu, kopi robusta Lampung asli pilihan petani lokal. Tersedia kemasan 100g dan 200g. Pesan via WhatsApp',
   keywords: [
     'kopi bubuk lampung',
     'kopi bubuk',

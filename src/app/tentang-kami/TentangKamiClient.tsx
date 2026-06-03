@@ -343,14 +343,14 @@ export default function TentangKamiClient() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full sm:w-auto">
                 <Button
                   variant="primary"
-                  href="/kemitraan"
+                  href="/kemitraan/"
                   className="w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm !bg-caramel !border-caramel !text-espresso hover:!bg-cream hover:!border-cream hover:!text-espresso shadow-lg hover:shadow-caramel/10 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Pelajari Peluang Kemitraan
                 </Button>
                 <Button
                   variant="outline"
-                  href="/kontak"
+                  href="/kontak/"
                   className="w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm !border-white/15 !text-cream hover:!bg-white/5 hover:!border-white/30 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Hubungi Kontak Kami

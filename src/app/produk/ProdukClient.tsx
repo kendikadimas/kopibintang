@@ -249,7 +249,7 @@ export default function ProdukDetail() {
                   Ketersediaan Kemasan
                 </span>
                 <div className="flex gap-3">
-                  {['100g', '250g'].map((size) => (
+                  {['100g', '200g'].map((size) => (
                     <div
                       key={size}
                       className="flex-1 bg-gradient-to-br from-roast to-espresso border border-white/10 hover:border-caramel/30 rounded-xl py-3.5 text-center font-body font-bold text-xs sm:text-sm text-cream tracking-wide transition-all duration-300 shadow-sm"
@@ -278,7 +278,7 @@ export default function ProdukDetail() {
                     Pesan via WhatsApp
                   </Button>
                 </a>
-                <a href="/kemitraan" className="flex-1">
+                <a href="/kemitraan/" className="flex-1">
                   <Button
                     variant="outline"
                     className="w-full !border-espresso !text-espresso hover:!bg-espresso hover:!text-cream min-h-[50px] transition-all duration-300"
@@ -560,7 +560,7 @@ export default function ProdukDetail() {
 
               <Button
                 variant="outline"
-                href="/kemitraan"
+                href="/kemitraan/"
                 className="relative z-10 w-full !border-white/30 !text-cream hover:!bg-cream hover:!text-espresso transition-all duration-300"
               >
                 Pelajari Kemitraan
