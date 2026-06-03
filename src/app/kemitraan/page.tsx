@@ -44,6 +44,84 @@ const WA_ICON = (
   </svg>
 );
 
+const PARTNERSHIP_REASONS = [
+  {
+    title: 'Kopi Retail Berkualitas',
+    description: 'Kami menawarkan produk kopi retail berkualitas dengan cita rasa Lampung murni yang konsisten di setiap kemasan.',
+  },
+  {
+    title: 'Permintaan Pasar Tinggi',
+    description: 'Permintaan pasar (demand) yang terus berkembang pesat untuk kopi bubuk robusta di segmen retail.',
+  },
+  {
+    title: 'Margin yang Kompetitif',
+    description: 'Menawarkan margin keuntungan yang menarik dan sangat kompetitif bagi mitra distributor.',
+  },
+  {
+    title: 'Repeat Order Tinggi',
+    description: 'Tingkat pembelian ulang (Repeat Order) yang tinggi dari konsumen akhir berkat rasa yang konsisten.',
+  },
+  {
+    title: 'Pasokan yang Stabil',
+    description: 'Jaminan kontinuitas pasokan produk yang stabil dan aman langsung dari pabrik utama kami.',
+  },
+  {
+    title: 'Dukungan Pemasaran Penuh',
+    description: 'Marketing support penuh dan berkelanjutan, baik media promosi cetak maupun aset digital terpadu.',
+  },
+];
+
+const REASON_ICONS = [
+  /* 1. Kopi Retail Berkualitas */
+  <svg key="1" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M12 3v18m0-18c-2.5 0-5 2-5 5.5S9.5 14 12 14m0-11c2.5 0 5 2 5 5.5S14.5 14 12 14m0 0c-2.5 0-5 2.5-5 7m5-7c2.5 0 5 2.5 5 7" />
+  </svg>,
+  /* 2. Permintaan Pasar Tinggi */
+  <svg key="2" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  </svg>,
+  /* 3. Margin yang Kompetitif */
+  <svg key="3" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-1.97-.659-1.17-.879-1.17-2.302 0-3.182 1.122-.841 2.937-.878 4.148-.058l.19.13M12 3v3m0 12v3" />
+  </svg>,
+  /* 4. Repeat Order Tinggi */
+  <svg key="4" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+  </svg>,
+  /* 5. Pasokan yang Stabil */
+  <svg key="5" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+  </svg>,
+  /* 6. Dukungan Pemasaran Penuh */
+  <svg key="6" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+  </svg>,
+];
+
+const COLLABORATION_STEPS = [
+  {
+    number: '01',
+    title: 'Daftar & isi formulir',
+    description: 'Lengkapi formulir pendaftaran kemitraan yang tersedia di website atau hubungi tim kami untuk mendapatkan berkas pendaftaran.',
+  },
+  {
+    number: '02',
+    title: 'Konsultasi & kesepakatan',
+    description: 'Diskusikan wilayah distribusi, target penjualan, dan kesepakatan harga grosir khusus distributor bersama tim sales kami.',
+    showWhatsAppButton: true,
+  },
+  {
+    number: '03',
+    title: 'Penandatanganan MoU',
+    description: 'Perjanjian kerjasama resmi (MoU) ditandatangani untuk menjamin hak eksklusivitas wilayah dan komitmen harga.',
+  },
+  {
+    number: '04',
+    title: 'Pengiriman & Siap Berbisnis',
+    description: 'Pesanan perdana diproses, sampel disiapkan, dan produk siap dikirim ke gudang Anda untuk dipasarkan.',
+  },
+];
+
 /* ── Page ─────────────────────────────────────────────────────── */
 export default function Kemitraan() {
   return (
@@ -116,39 +194,47 @@ export default function Kemitraan() {
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col gap-14">
 
           {/* Header */}
-          <div className="flex flex-col gap-3 max-w-xl">
-
+          <div className="flex flex-col gap-4 max-w-3xl text-left">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-espresso tracking-wide leading-tight">
-              Mengapa Bermitra<br />dengan Kami
+              Alasan Bermitra dengan<br />CV Harapan Buah Hati Mandiri Tunggal
             </h2>
-            <p className="font-body text-sm text-espresso/60 leading-[1.8] font-light">
-              Empat alasan kuat yang membuat kemitraan bersama Kopi Bintang Pringsewu
-              menjadi pilihan bisnis yang tepat dan berkelanjutan.
+            <p className="font-body text-sm sm:text-base text-espresso/80 leading-relaxed">
+              Sebagai produsen terpercaya, kami menawarkan berbagai keunggulan produk dan skema kerjasama demi kemudahan dan profitabilitas usaha distributor kami:
             </p>
           </div>
 
-          {/* Benefits grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {PARTNERSHIP_BENEFITS.map((b, i) => (
+          {/* Reasons grid: 3 columns on desktop, 2 on tablet, 1 on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {PARTNERSHIP_REASONS.map((reason, i) => (
               <div
                 key={i}
-                className="group flex gap-6 items-start bg-white border border-fog/60 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                className="group flex flex-col gap-5 bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-7 md:p-8 relative overflow-hidden shadow-md hover:border-caramel/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 text-left"
               >
+                {/* Subtle background glow */}
+                <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none z-0" />
+
                 {/* Icon box */}
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-caramel/10 border border-caramel/20 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-cream transition-all duration-300">
-                  {BENEFIT_ICONS[i]}
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-caramel/10 border border-caramel/20 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-espresso transition-all duration-300 relative z-10">
+                  {REASON_ICONS[i]}
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-display text-xl md:text-2xl text-espresso tracking-wide leading-tight group-hover:text-caramel transition-colors duration-300">
-                    {b.title}
+                <div className="flex flex-col gap-2 relative z-10">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-white tracking-wide leading-tight group-hover:text-caramel transition-colors duration-300">
+                    {reason.title}
                   </h3>
-                  <p className="font-body text-sm text-espresso/60 leading-[1.75] font-light">
-                    {b.description}
+                  <p className="font-body text-xs sm:text-sm text-cream/90 leading-relaxed">
+                    {reason.description}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Tumbuh bersama statement under the grid */}
+          <div className="mt-6 text-center max-w-3xl mx-auto border-t border-fog/30 pt-8 w-full">
+            <p className="font-body text-sm sm:text-base text-espresso/70 italic leading-relaxed font-light">
+              &ldquo;Melalui kemitraan ini, kami berkomitmen untuk tumbuh bersama distributor dalam memperluas jangkauan pasar dan meningkatkan penjualan secara berkelanjutan.&rdquo;
+            </p>
           </div>
         </div>
       </section>
@@ -162,14 +248,12 @@ export default function Kemitraan() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
 
             {/* Left: section label + headline */}
-            <div className="lg:col-span-4 flex flex-col gap-5 lg:sticky lg:top-28">
-
+            <div className="lg:col-span-4 flex flex-col gap-5 lg:sticky lg:top-28 text-left">
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream tracking-wide leading-tight">
-                Bagaimana Cara Kerjanya
+                Alur Kolaborasi
               </h2>
-              <p className="font-body text-sm text-cream/60 leading-[1.8] font-light">
-                Alur pendaftaran terstruktur dan transparan agar kolaborasi bisnis dapat
-                terjalin dengan sehat dan lancar dari hari pertama.
+              <p className="font-body text-sm text-cream/85 leading-[1.8]">
+                Alur kolaborasi terstruktur dan transparan agar kerjasama kemitraan dapat terjalin dengan sehat, teratur, dan produktif.
               </p>
 
               {/* Compact contact nudge */}
@@ -190,14 +274,14 @@ export default function Kemitraan() {
             </div>
 
             {/* Right: step cards */}
-            <div className="lg:col-span-8 flex flex-col gap-0">
-              {PARTNERSHIP_STEPS.map((step, i) => (
+            <div className="lg:col-span-8 flex flex-col gap-0 text-left">
+              {COLLABORATION_STEPS.map((step, i) => (
                 <div
                   key={i}
                   className="group flex gap-5 sm:gap-7 items-start pb-8 last:pb-0 relative"
                 >
                   {/* Vertical connecting line */}
-                  {i < PARTNERSHIP_STEPS.length - 1 && (
+                  {i < COLLABORATION_STEPS.length - 1 && (
                     <div className="absolute left-[19px] top-12 bottom-0 w-px bg-caramel/20" />
                   )}
 
@@ -207,18 +291,94 @@ export default function Kemitraan() {
                   </div>
 
                   {/* Card */}
-                  <div className="flex-1 bg-espresso border border-white/8 rounded-2xl p-6 md:p-7 group-hover:border-caramel/25 transition-colors duration-300">
+                  <div className="flex-1 bg-espresso border border-white/8 rounded-2xl p-6 md:p-7 group-hover:border-caramel/25 transition-colors duration-300 flex flex-col items-start">
                     <h3 className="font-display text-xl md:text-2xl text-cream tracking-wide mb-2 group-hover:text-caramel transition-colors duration-300">
                       {step.title}
                     </h3>
-                    <p className="font-body text-sm text-cream/60 leading-[1.75] font-light">
+                    <p className="font-body text-sm text-cream/90 leading-[1.75]">
                       {step.description}
                     </p>
+
+                    {/* CS WhatsApp Discussion Button for Step 2 */}
+                    {step.showWhatsAppButton && (
+                      <a
+                        href={CONTACT.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 font-body font-semibold text-[11px] tracking-wider uppercase bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                      >
+                        {WA_ICON}
+                        Tanya-tanya dulu via WhatsApp
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
-            </div>
 
+              {/* Syarat Utama Card */}
+              <div className="mt-12 bg-espresso border border-caramel/25 rounded-3xl p-6 md:p-8 flex flex-col gap-6 relative overflow-hidden group hover:border-caramel/40 transition-colors duration-300">
+                <div className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-caramel/5 blur-xl pointer-events-none group-hover:bg-caramel/10 transition-colors duration-500" />
+                
+                <div className="flex items-center gap-2.5 text-caramel">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span className="font-mono text-[9px] uppercase tracking-widest font-bold">Syarat Kemitraan</span>
+                </div>
+
+                <div className="flex flex-col gap-5 text-left">
+                  <div>
+                    <h3 className="font-body text-base sm:text-lg font-semibold text-cream tracking-wide">Syarat Utama</h3>
+                    <p className="font-body text-xs text-cream/40 mt-1 uppercase tracking-wider">Ketentuan Utama untuk Menjadi Mitra Distributor Resmi</p>
+                  </div>
+                  
+                  {/* Grid of 3 mini-cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    {/* Sub-card 1 */}
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3 hover:border-caramel/20 transition-colors duration-300 text-left">
+                      <div className="w-8 h-8 rounded-lg bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel">
+                        <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h2.25A2.25 2.25 0 0 0 22 18.75V16.5M13.5 21V13.5m0 7.5h-4.5m4.5 0H15m-1.5-7.5L12 3m0 0L4.5 13.5m7.5-10.5L19.5 13.5M9 21V13.5m0 7.5H2.25A2.25 2.25 0 0 1 0 18.75V16.5" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="font-body text-[11px] sm:text-xs font-semibold text-caramel uppercase tracking-wider">Jaringan Retail</h4>
+                        <p className="font-body text-[11px] text-cream/95 leading-relaxed font-medium uppercase">MEMILIKI JARINGAN RETAIL/TOKO DI WILAYAH TUJUAN</p>
+                      </div>
+                    </div>
+
+                    {/* Sub-card 2 */}
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3 hover:border-caramel/20 transition-colors duration-300 text-left">
+                      <div className="w-8 h-8 rounded-lg bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel">
+                        <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="font-body text-[11px] sm:text-xs font-semibold text-caramel uppercase tracking-wider">Gudang Layak</h4>
+                        <p className="font-body text-[11px] text-cream/95 leading-relaxed font-medium uppercase">MEMILIKI GUDANG & PENYIMPANAN YANG LAYAK</p>
+                      </div>
+                    </div>
+
+                    {/* Sub-card 3 */}
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3 hover:border-caramel/20 transition-colors duration-300 text-left">
+                      <div className="w-8 h-8 rounded-lg bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel">
+                        <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-1.97-.659-1.17-.879-1.17-2.302 0-3.182 1.122-.841 2.937-.878 4.148-.058l.19.13M12 3v3m0 12v3" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="font-body text-[11px] sm:text-xs font-semibold text-caramel uppercase tracking-wider">Harga Pasar</h4>
+                        <p className="font-body text-[11px] text-cream/95 leading-relaxed font-medium uppercase">BERKOMITMEN MENJAGA STABILITAS HARGA PASAR</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -260,7 +420,7 @@ export default function Kemitraan() {
                 Siap Bertumbuh<br />
                 <em className="not-italic text-caramel">Bersama Kami?</em>
               </h2>
-              <p className="font-body text-sm text-cream/65 leading-[1.85] max-w-lg font-light">
+              <p className="font-body text-sm text-cream/85 leading-[1.85] max-w-lg">
                 Hubungi kami sekarang dan tim kami akan merespons dalam 1×24 jam.
                 Diskusikan rencana wilayah distribusi dan potensi keagenan Anda
                 bersama tim eksekutif kami.

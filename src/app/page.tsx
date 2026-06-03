@@ -7,6 +7,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import BenefitItem from '@/components/ui/BenefitItem';
 import GalleryGrid from '@/components/ui/GalleryGrid';
 import DeliveryCarousel from '@/components/ui/DeliveryCarousel';
+import HomepageFAQ from '@/components/sections/HomepageFAQ';
 
 const PILLAR_ICONS = [
   // Leaf / Biji Kopi
@@ -106,6 +107,7 @@ export default function Home() {
         <div className="flex flex-col gap-12">
           <SectionHeading
             title="Kualitas yang Berbicara Sendiri"
+            subtitle="Kami menerapkan standar ketat mulai dari pemilihan biji lokal pilihan, proses roasting modern yang presisi, hingga distribusi terpadu untuk memastikan mutu kopi terbaik di setiap cangkir."
             align="left"
           />
 
@@ -219,7 +221,10 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* ─── SECTION 5: CTA (Premium Card Layout) ────────────────────── */}
+      {/* ─── SECTION 5: FAQ SECTION ────────────────────────────────────── */}
+      <HomepageFAQ />
+
+      {/* ─── SECTION 6: CTA (Premium Card Layout) ────────────────────── */}
       <SectionWrapper background="cream" paddingY="lg" className="text-center">
         <div className="bg-gradient-to-br from-roast via-espresso to-[#120B05] text-cream rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl max-w-4xl mx-auto relative overflow-hidden border border-caramel/15 group hover:border-caramel/25 transition-all duration-500 grain">
           

@@ -26,7 +26,7 @@ export default function DeliveryCarousel() {
         <div className="flex items-center gap-6">
           <span className="font-body text-xs text-cream/50 uppercase tracking-widest font-semibold flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-caramel animate-pulse" />
-            Ribuan Paket Terkirim
+            Distribusi Terjadwal
           </span>
           
           {/* Navigation Arrows */}

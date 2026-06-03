@@ -21,22 +21,62 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kopibintangpringsewu-official.com"),
   title: {
     default: `${SITE_META.name} — ${SITE_META.tagline}`,
     template: `%s | ${SITE_META.name}`,
   },
   description: SITE_META.description,
   keywords: [
-    "kopi bubuk lampung",
     "kopi bubuk",
-    "kopi bubuk bintang pringsewu",
+    "kopi lampung",
+    "kopi bintang pringsewu",
     "kopi bintang",
+    "website kopi",
+    "umkm kopi",
+    "kopi bubuk lampung",
     "kopi robusta lampung",
     "pringsewu",
     "cv harapan buah hati mandiri tunggal",
     "kemitraan kopi",
     "distributor kopi"
   ],
+  authors: [{ name: "Kopi Bintang Pringsewu" }, { name: "Kalana Labs", url: "https://kalanalabs.com" }],
+  creator: "Kopi Bintang Pringsewu",
+  publisher: "CV. Harapan Buah Hati Mandiri Tunggal",
+  openGraph: {
+    title: SITE_META.name,
+    description: SITE_META.description,
+    url: "https://kopibintangpringsewu-official.com",
+    siteName: SITE_META.name,
+    images: [
+      {
+        url: "/images/product.webp",
+        width: 800,
+        height: 600,
+        alt: "Kopi Bubuk Bintang Pringsewu",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_META.name,
+    description: SITE_META.description,
+    images: ["/images/product.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

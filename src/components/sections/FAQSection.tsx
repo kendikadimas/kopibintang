@@ -61,11 +61,11 @@ const RETAIL_FAQS: FAQItem[] = [
     a: (
       <div className="flex flex-col gap-1">
         <p>Anda dapat menghubungi kami melalui:</p>
-        <ul className="list-disc pl-5 mt-1 space-y-1">
-          <li>WhatsApp: 0823 7799 8183</li>
-          <li>Email: harapan.mandiritunggal.cv@gmail.com</li>
-          <li>Formulir Kontak di Website</li>
-          <li>Media Sosial Resmi Perusahaan</li>
+        <ul className="list-none pl-0 mt-1 space-y-1">
+          <li>• WhatsApp: 0823 7799 8183</li>
+          <li>• Email: harapan.mandiritunggal.cv@gmail.com</li>
+          <li>• Formulir Kontak di Website</li>
+          <li>• Media Sosial Resmi Perusahaan</li>
         </ul>
       </div>
     )
@@ -125,10 +125,10 @@ export default function FAQSection() {
                 setActiveTab('retail');
                 setOpenIndex(0);
               }}
-              className={`font-body text-sm font-semibold pb-4 transition-all duration-300 border-b-2 px-4 ${
+              className={`font-body text-sm font-semibold pb-4 transition-all duration-300 border-b-2 px-4 cursor-pointer ${
                 activeTab === 'retail'
                   ? 'text-caramel border-caramel'
-                  : 'text-muted border-transparent hover:text-espresso'
+                  : 'text-espresso/60 border-transparent hover:text-espresso'
               }`}
             >
               FAQ Produk Kopi Bubuk Retail
@@ -138,10 +138,10 @@ export default function FAQSection() {
                 setActiveTab('distributor');
                 setOpenIndex(0);
               }}
-              className={`font-body text-sm font-semibold pb-4 transition-all duration-300 border-b-2 px-4 ${
+              className={`font-body text-sm font-semibold pb-4 transition-all duration-300 border-b-2 px-4 cursor-pointer ${
                 activeTab === 'distributor'
                   ? 'text-caramel border-caramel'
-                  : 'text-muted border-transparent hover:text-espresso'
+                  : 'text-espresso/60 border-transparent hover:text-espresso'
               }`}
             >
               FAQ Khusus Distributor
@@ -156,16 +156,26 @@ export default function FAQSection() {
             return (
               <div
                 key={idx}
-                className="bg-white border border-fog/60 rounded-2xl overflow-hidden transition-all duration-300 hover:border-caramel/30 hover:shadow-sm"
+                className={`bg-gradient-to-br from-roast via-espresso to-[#150D06] border rounded-2xl overflow-hidden transition-all duration-300 group w-full ${
+                  isOpen 
+                    ? 'border-caramel/50 shadow-[0_12px_30px_-6px_rgba(200,137,90,0.12)]' 
+                    : 'border-white/5 hover:border-caramel/30 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-lg hover:-translate-y-0.5'
+                }`}
               >
                 {/* Accordion Header Button */}
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left font-display text-sm sm:text-base text-espresso font-semibold hover:text-caramel transition-colors duration-200"
+                  className={`w-full px-6 py-5 flex items-center justify-between text-left font-body text-sm sm:text-base font-medium transition-colors duration-200 cursor-pointer ${
+                    isOpen ? 'text-caramel' : 'text-cream hover:text-caramel'
+                  }`}
                 >
-                  <span>{faq.q}</span>
-                  <span className={`transform transition-transform duration-300 text-caramel ${isOpen ? 'rotate-180' : ''}`}>
-                    <svg className="w-4 h-4 stroke-current fill-none" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <span className="pr-2 leading-snug break-words">{faq.q}</span>
+                  <span className={`w-7 h-7 rounded-full flex items-center justify-center text-caramel shrink-0 transition-all duration-300 border ${
+                    isOpen 
+                      ? 'rotate-180 bg-caramel text-espresso border-caramel' 
+                      : 'bg-white/5 border-white/10 group-hover:bg-caramel group-hover:text-espresso group-hover:border-caramel'
+                  }`}>
+                    <svg className="w-3.5 h-3.5 stroke-current fill-none" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
                   </span>
@@ -174,10 +184,10 @@ export default function FAQSection() {
                 {/* Accordion Content Panel */}
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? 'max-h-[300px] border-t border-fog/20' : 'max-h-0'
+                    isOpen ? 'max-h-[300px] border-t border-white/10' : 'max-h-0'
                   }`}
                 >
-                  <div className="px-6 py-5 font-body text-xs sm:text-sm text-espresso/70 leading-relaxed font-light bg-cream/20">
+                  <div className="px-6 py-5 font-body text-xs sm:text-sm text-cream/80 leading-relaxed font-normal bg-white/5">
                     {faq.a}
                   </div>
                 </div>

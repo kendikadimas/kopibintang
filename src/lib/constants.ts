@@ -3,7 +3,6 @@ export const SITE_META = {
   tagline: 'Dari Tanah Lampung, Untuk Secangkir yang Tak Terlupakan',
   description: 'Kopi bubuk pilihan dari biji lokal terbaik — diproses higienis, diseduh penuh cinta.',
   company: 'CV. Harapan Buah Hati Mandiri Tunggal',
-  establishedYear: '2018',
 };
 
 export const CONTACT = {
@@ -90,16 +89,16 @@ export const PARTNERSHIP_STEPS = [
 
 export const COMPANY_VALUES = [
   {
-    title: 'Keaslian',
-    description: 'Kami bangga dengan asal-usul lokal dan tidak pernah berkompromi soal kualitas bahan baku.',
+    title: 'Biji Pilihan (Selected Beans)',
+    description: 'Hanya menggunakan biji kopi robusta Lampung pilihan yang dipetik merah secara selektif oleh petani mitra kami di dataran Pringsewu.',
   },
   {
-    title: 'Konsistensi',
-    description: 'Setiap kemasan yang keluar dari fasilitas kami melewati standar kualitas yang sama ketatnya.',
+    title: 'Proses Higienis (Hygienic Process)',
+    description: 'Setiap tahap pengolahan, mulai dari pencucian, penjemuran, hingga pengemasan, dikerjakan dengan standar kebersihan tertinggi untuk menjaga kemurnian kopi.',
   },
   {
-    title: 'Kemitraan',
-    description: 'Kami tumbuh karena kepercayaan mitra dan pelanggan. Hubungan jangka panjang adalah fondasi bisnis kami.',
+    title: 'Roasting Modern (Modern Roasting)',
+    description: 'Menggunakan mesin roasting otomatis berteknologi tinggi untuk memastikan profil pemanggangan yang konsisten dan mengeluarkan cita rasa optimal.',
   },
 ];
 

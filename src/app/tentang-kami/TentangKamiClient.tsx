@@ -2,34 +2,25 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { CONTACT, SITE_META, ABOUT_COMPANY, COMPANY_VALUES } from '@/lib/constants';
+import { CONTACT, SITE_META, ABOUT_COMPANY } from '@/lib/constants';
 import Button from '@/components/ui/Button';
 
 type TabKey = 'visi' | 'misi';
 
+const DELIVERY_IMAGES = [
+  { src: '/images/delivery.webp', alt: 'Pengiriman Kopi Bintang Pringsewu', caption: 'Armada Pengiriman Kopi' },
+  { src: '/images/delivery2.webp', alt: 'Distribusi Produk Kopi Lampung', caption: 'Pemuatan Kopi Retail' },
+  { src: '/images/delivery3.webp', alt: 'Pengiriman Kemitraan Kopi Lampung', caption: 'Grosir Pengiriman B2B' },
+  { src: '/images/delivery4.webp', alt: 'Armada Pengiriman Kopi Bintang', caption: 'Wilayah Lampung Selatan' },
+  { src: '/images/delivery5.webp', alt: 'Stok Kopi Bubuk Retail', caption: 'Logistik Terjadwal' },
+  { src: '/images/delivery6.webp', alt: 'Distribusi Kopi Pringsewu Lampung', caption: 'Pengiriman Wilayah Barat' },
+  { src: '/images/delivery7.webp', alt: 'Pengiriman Kopi Grosir', caption: 'Pasokan Retail Pringsewu' },
+  { src: '/images/delivery8.webp', alt: 'Distribusi Agen Kopi Lampung', caption: 'Muatan Truk Logistik' },
+  { src: '/images/delivery9.webp', alt: 'Armada Kemitraan Kopi Bintang Pringsewu', caption: 'Jaringan Mitra Lampung' },
+];
+
 export default function TentangKamiClient() {
   const [activeTab, setActiveTab] = useState<TabKey>('visi');
-
-  // SVG Icons for values (Principles)
-  const valueIcons = [
-    // Keaslian
-    <svg key="original" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>,
-    // Konsistensi
-    <svg key="consistency" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 6v6l4 2" />
-    </svg>,
-    // Kemitraan
-    <svg key="partnership" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  ];
 
   return (
     <div className="flex flex-col w-full bg-cream text-espresso overflow-x-hidden">
@@ -84,8 +75,8 @@ export default function TentangKamiClient() {
             <div className="lg:col-span-7 flex flex-col gap-5 items-start text-left animate-slide-left">
 
               
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-espresso tracking-wide leading-tight">
-                Kisah di Balik<br />Kopi Bintang Pringsewu
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-espresso leading-snug">
+                Kisah di Balik Kopi Bintang Pringsewu
               </h2>
 
               {/* Bold Accent Blockquote */}
@@ -121,16 +112,7 @@ export default function TentangKamiClient() {
                 {/* Visual shade overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/45 via-transparent to-transparent opacity-80" />
                 
-                {/* Floating glassmorphic tag */}
-                {/* <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-cream flex items-center justify-between">
-                  <div>
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-caramel font-semibold block mb-0.5">Produksi Lokal</span>
-                    <span className="font-display text-base font-semibold">Mutu Terjamin</span>
-                  </div> */}
-                  {/* <span className="font-mono text-xs text-cream/70 bg-white/15 px-3 py-1.5 rounded-lg border border-white/10">
-                    Sejak {SITE_META.establishedYear}
-                  </span> */}
-                {/* </div> */}
+
               </div>
             </div>
             
@@ -198,10 +180,10 @@ export default function TentangKamiClient() {
                   <p className="font-display text-xl sm:text-2xl md:text-3xl italic text-cream leading-relaxed max-w-3xl font-light">
                     &ldquo;{ABOUT_COMPANY.vision}&rdquo;
                   </p>
-                  <div className="w-8 h-0.5 bg-caramel/40 my-6" />
-                  <p className="font-body text-xs sm:text-sm text-cream/60 max-w-xl leading-relaxed">
+                  {/* <div className="w-8 h-0.5 bg-caramel/40 my-6" /> */}
+                  {/* <p className="font-body text-xs sm:text-sm text-cream/60 max-w-xl leading-relaxed">
                     Kami berkomitmen untuk melebarkan pasar kopi Lampung tanpa melupakan kelestarian ekosistem kopi lokal dan kesejahteraan para petani yang mendukung kami.
-                  </p>
+                  </p> */}
                 </div>
 
                 <span className="absolute bottom-2 right-6 text-[150px] font-display text-white/5 select-none pointer-events-none leading-none">
@@ -241,65 +223,83 @@ export default function TentangKamiClient() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          SECTION 4 — PRINSIP KERJA (EDITORIAL TIMELINE SHOWCASE)
+          SECTION 4 — JARINGAN & GALERI DISTRIBUSI (PARTNERS & SHIPPINGS)
       ══════════════════════════════════════════════════════════ */}
-      <section className="w-full bg-cream py-20 md:py-28 lg:py-32 relative">
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
-            {/* Left sticky column */}
-            <div className="lg:col-span-5 flex flex-col gap-5 lg:sticky lg:top-28 text-left animate-slide-left">
-
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-espresso tracking-wide leading-tight">
-                Nilai Utama yang<br />Kami Pegang
-              </h2>
-              <p className="font-body text-sm text-espresso/60 leading-[1.8] font-light max-w-md">
-                Dalam setiap keputusan bisnis, proses pemanggangan, dan relasi mitra, ketiga pilar utama ini menjadi jangkar komitmen kami.
-              </p>
-              
-              {/* Graphic Star Element decoration */}
-              <div className="hidden lg:block mt-8 w-24 h-24 text-caramel/25 animate-pulse">
-                <svg className="w-full h-full stroke-current fill-none" strokeWidth={1} viewBox="0 0 24 24">
-                  <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.8-6.3 4.8 2.3-7.4-6-4.6h7.6z" />
-                </svg>
+      <section className="w-full bg-cream py-20 md:py-28 lg:py-32 border-t border-fog/30 relative">
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col gap-14">
+          
+          {/* Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-8 border-b border-fog/20">
+            {/* Title block */}
+            <div className="lg:col-span-6 flex flex-col items-start gap-3.5 text-left">
+              <div className="flex items-center gap-3 text-caramel">
+                <span className="w-6 h-px bg-current" />
+                <span className="font-body text-[10px] tracking-[0.3em] uppercase font-bold">Bukti Kerja</span>
               </div>
+              
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] text-espresso tracking-wide leading-[1.1] font-medium">
+                Jaringan & Galeri <em className="not-italic text-caramel font-serif">Distribusi</em>
+              </h2>
             </div>
 
-            {/* Right stacked timeline column */}
-            <div className="lg:col-span-7 relative flex flex-col gap-8 text-left animate-slide-right">
-              {/* Vertical timeline connector line */}
-              <div className="absolute left-[34px] top-8 bottom-8 w-0.5 bg-fog/60 z-0" />
-
-              {COMPANY_VALUES.map((value, i) => (
-                <div 
-                  key={i} 
-                  className="relative z-10 flex gap-6 sm:gap-8 items-start bg-white border border-fog/50 rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
-                >
-                  {/* Decorative index bubble acting as timeline node */}
-                  <div className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] shrink-0 rounded-2xl bg-cream border border-fog flex items-center justify-center font-display text-base sm:text-lg font-bold text-bark group-hover:bg-caramel group-hover:text-cream group-hover:border-caramel transition-all duration-300 z-10 shadow-sm">
-                    {i === 0 ? 'I' : i === 1 ? 'II' : 'III'}
-                  </div>
-
-                  <div className="flex flex-col gap-4 w-full">
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-fog/30 pb-3">
-                      <h3 className="font-display text-xl sm:text-2xl text-espresso tracking-wide leading-none group-hover:text-bark transition-colors duration-300">
-                        {value.title}
-                      </h3>
-                      {/* Mini visual icon tag */}
-                      <span className="w-8 h-8 rounded-lg bg-caramel/5 border border-caramel/10 flex items-center justify-center text-caramel">
-                        {valueIcons[i]}
-                      </span>
-                    </div>
-
-                    <p className="font-body text-xs sm:text-sm text-espresso/60 leading-relaxed font-light">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* Description block */}
+            <div className="lg:col-span-6 flex flex-col items-start lg:items-end gap-5 text-left lg:text-right w-full">
+              <p className="font-body text-xs sm:text-sm text-espresso/80 leading-[1.75] max-w-md lg:text-right">
+                Kami berkomitmen menjaga kelancaran pasokan kopi untuk mitra toko, warung, dan distributor resmi di seluruh penjuru Lampung dan sekitarnya.
+              </p>
             </div>
-
           </div>
+
+          {/* Stats Bar */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center bg-gradient-to-br from-roast via-espresso to-[#150D06] text-cream p-8 rounded-3xl border border-white/5 shadow-md relative overflow-hidden grain">
+            <div className="absolute -top-12 -left-12 w-28 h-28 rounded-full bg-caramel/10 blur-xl pointer-events-none" />
+            <div className="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-bark/10 blur-xl pointer-events-none" />
+            
+            {/* Stat 1 */}
+            <div className="flex flex-col gap-1.5 relative z-10 py-4 sm:py-0">
+              <span className="font-display text-3xl sm:text-4xl font-bold text-caramel tracking-wide uppercase">Robusta</span>
+              <span className="font-body text-[10px] sm:text-xs text-cream/80 font-medium uppercase tracking-wider">100% Kopi Lampung Asli</span>
+            </div>
+            
+            {/* Divider (Mobile: Horizontal, Desktop: Vertical) */}
+            <div className="hidden sm:block w-px h-12 bg-white/10 self-center" />
+            <div className="block sm:hidden h-px w-full bg-white/10" />
+
+            {/* Stat 2 */}
+            <div className="flex flex-col gap-1.5 relative z-10 py-4 sm:py-0">
+              <span className="font-display text-3xl sm:text-4xl font-bold text-caramel tracking-wide uppercase">Higienis</span>
+              <span className="font-body text-[10px] sm:text-xs text-cream/80 font-medium uppercase tracking-wider">Proses Mutu Terjamin</span>
+            </div>
+
+            {/* Divider (Mobile: Horizontal, Desktop: Vertical) */}
+            <div className="hidden sm:block w-px h-12 bg-white/10 self-center" />
+            <div className="block sm:hidden h-px w-full bg-white/10" />
+
+            {/* Stat 3 */}
+            <div className="flex flex-col gap-1.5 relative z-10 py-4 sm:py-0">
+              <span className="font-display text-3xl sm:text-4xl font-bold text-caramel tracking-wide uppercase">Adiluwih</span>
+              <span className="font-body text-[10px] sm:text-xs text-cream/80 font-medium uppercase tracking-wider">Sentra Produksi Pringsewu</span>
+            </div>
+          </div>
+
+          {/* Photo Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {DELIVERY_IMAGES.map((img, idx) => (
+              <div 
+                key={idx} 
+                className="group relative aspect-[4/3] bg-fog/20 overflow-hidden border border-fog/40 rounded-2xl shadow-sm card-hover hover:border-caramel/30 hover:shadow-lg transition-all duration-500"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

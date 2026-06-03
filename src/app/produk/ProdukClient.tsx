@@ -10,13 +10,13 @@ type TabKey = 'proses' | 'spesifikasi' | 'penyajian';
 
 const SPECIFICATIONS = [
   { label: 'Kategori Produk', value: 'Kopi Bubuk Retail & Grosir' },
-  { label: 'Jenis Kopi', value: '100% Robusta Lampung' },
+  { label: 'Jenis Kopi', value: 'Robusta Lampung' },
   { label: 'Asal Biji Kopi', value: 'Kec. Adiluwih, Pringsewu, Lampung' },
   { label: 'Metode Pasca Panen', value: 'Natural Process' },
   { label: 'Roasting Profile', value: 'Medium-Dark Roast' },
   { label: 'Tingkat Gilingan', value: 'Halus — Optimal untuk Tubruk' },
-  { label: 'Pilihan Kemasan', value: 'Kemasan 100g · 200g)' },
-  { label: 'Sertifikasi Mutu', value: 'Higienis · Standar P-IRT / Halal' },
+  { label: 'Pilihan Kemasan', value: 'Kemasan 100g · 200g' },
+  { label: 'Sertifikasi Mutu', value: 'Higienis · Halal' },
   { label: 'Legalitas', value: 'CV. Harapan Buah Hati Mandiri Tunggal' },
 ];
 
@@ -35,11 +35,12 @@ const FLAVOR_PROFILE = [
 // ];
 
 const BREW_STEPS = [
-  { n: '01', title: 'Takar Bubuk Kopi', body: 'Masukkan 6-8 gram kopi bubuk Bintang Pringsewu ke dalam cangkir saji.' },
-  { n: '02', title: 'Persiapkan Air Panas', body: 'Panaskan air hingga mendidih, diamkan 30 detik agar suhu turun ke 90–95 °C.' },
-  { n: '03', title: 'Penyeduhan Awal (Blooming)', body: 'Tuangkan ±150 ml air panas secara merata. Biarkan 30 detik tanpa diaduk.' },
-  { n: '04', title: 'Aduk & Endapkan', body: 'Aduk merata, diamkan 3-5 menit agar ampas mengendap sempurna.' },
-  { n: '05', title: 'Nikmati Hangat', body: 'Sajikan. Tambahkan gula atau susu sesuai selera tradisional Anda.' },
+  { n: '01', title: 'Masukkan Kopi Bubuk', body: 'Masukkan 6-8 gram kopi bubuk Bintang Pringsewu ke dalam cangkir' },
+  { n: '02', title: 'Tambahkan Gula', body: 'Tambahkan gula jika diinginkan.' },
+  { n: '03', title: 'Tuangkan Air Panas', body: 'Tuangkan air panas ke dalam cangkir.' },
+  { n: '04', title: 'Aduk Perlahan', body: 'Aduk perlahan hingga kopi dan gula tercampur.' },
+  { n: '05', title: 'Endapkan Ampas', body: 'Diamkan sekitar 3–5 menit agar ampas kopi mengendap di dasar cangkir.' },
+  { n: '06', title: 'Siap Dinikmati', body: 'Kopi tubruk siap dinikmati.' },
 ];
 
 const TABS: { key: TabKey; label: string }[] = [
@@ -49,7 +50,7 @@ const TABS: { key: TabKey; label: string }[] = [
 ];
 
 const IMAGES = [
-  { src: '/images/product_angle_front.png', label: 'Kemasan Utama' },
+  { src: '/images/product.webp', label: 'Kemasan Utama' },
   { src: '/images/product_angle_isometric.png', label: 'Tampilan Sudut' },
   { src: '/images/product_angle_flatlay.png', label: 'Sajian Produk' },
   { src: '/images/product_angle_detail.png', label: 'Detail Kemasan' },
@@ -143,9 +144,9 @@ export default function ProdukDetail() {
             <div ref={galleryRef} className="lg:sticky lg:top-28 flex flex-col gap-4 animate-slide-left">
 
               {/* Main image frame */}
-              <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-gradient-to-br from-white to-parchment/30 border border-bark/10 shadow-xl group shimmer-on-hover transition-colors duration-500 hover:border-caramel/30">
-                {/* Decorative bg blob */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-parchment/80 pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+              <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-gradient-to-br from-parchment via-cream/80 to-caramel/15 border border-caramel/20 shadow-xl group hover:border-caramel/40 transition-all duration-500">
+                {/* Decorative colored glow blob */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] rounded-full bg-gradient-to-tr from-caramel/20 to-[#FCE7D2]/40 blur-xl pointer-events-none transition-transform duration-700 group-hover:scale-110 z-0" />
 
                 <Image
                   key={activeImg}
@@ -153,7 +154,7 @@ export default function ProdukDetail() {
                   alt={IMAGES[activeImg].label}
                   fill
                   priority={activeImg === 0}
-                  className="object-contain p-6 md:p-10 transition-all duration-500 ease-out group-hover:scale-[1.04] animate-enter"
+                  className="object-cover transition-all duration-500 ease-out group-hover:scale-[1.04] animate-enter relative z-10"
                 />
 
                 {/* Label chip */}
@@ -169,16 +170,16 @@ export default function ProdukDetail() {
                     key={i}
                     onClick={() => setActiveImg(i)}
                     aria-label={img.label}
-                    className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 group/thumb ${i === activeImg
-                        ? 'border-caramel ring-2 ring-caramel/20'
-                        : 'border-fog hover:border-caramel/50 opacity-60 hover:opacity-100'
+                    className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 group/thumb cursor-pointer ${i === activeImg
+                      ? 'border-caramel ring-2 ring-caramel/10 bg-caramel/5'
+                      : 'border-fog/50 hover:border-caramel/30 opacity-70 hover:opacity-100'
                       }`}
                   >
                     <Image
                       src={img.src}
                       alt={img.label}
                       fill
-                      className="object-cover p-1 group-hover/thumb:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover/thumb:scale-105 transition-transform duration-300"
                     />
                   </button>
                 ))}
@@ -212,24 +213,25 @@ export default function ProdukDetail() {
               </p>
 
               {/* ── Flavor Profile Visual Bars ── */}
-              <div className="flex flex-col gap-5 bg-gradient-to-br from-white to-parchment/30 border border-bark/10 rounded-3xl p-6 md:p-8 shadow-sm transition-all duration-500 hover:border-caramel/30 hover:shadow-md relative overflow-hidden">
-                {/* Subtle background glow */}
-                <div className="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-caramel/5 blur-lg pointer-events-none" />
+              {/* <div className="flex flex-col gap-5 bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden grain">
+                {/* Subtle background glow *
+                <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/10 blur-xl pointer-events-none" />
 
-                <span className="font-body font-bold text-[10px] uppercase tracking-[0.2em] text-espresso relative z-10">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-caramel font-bold block relative z-10">
                   Profil Cita Rasa
                 </span>
+                
                 <div className="flex flex-col gap-4 relative z-10">
                   {FLAVOR_PROFILE.map((f) => (
-                    <div key={f.label} className="flex flex-col gap-1.5">
+                    <div key={f.label} className="flex flex-col gap-2">
                       <div className="flex justify-between items-baseline">
-                        <span className="font-body text-xs font-bold text-espresso">{f.label}</span>
-                        <span className="font-body text-[10px] text-muted">{f.desc}</span>
+                        <span className="font-body text-xs font-bold text-white">{f.label}</span>
+                        <span className="font-body text-[10px] text-cream/70">{f.desc}</span>
                       </div>
-                      {/* Bar track */}
-                      <div className="w-full h-1.5 rounded-full bg-fog overflow-hidden">
+                      {/* Bar track 
+                      <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
                         <div
-                          className="h-full rounded-full bg-caramel bar-fill"
+                          className="h-full rounded-full bg-gradient-to-r from-caramel via-amber-500 to-caramel bar-fill shadow-[0_0_8px_rgba(200,137,90,0.4)]"
                           style={{
                             '--bar-width': `${f.pct}%`,
                             '--bar-delay': f.delay,
@@ -239,18 +241,18 @@ export default function ProdukDetail() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* ── Packaging sizes ── */}
               <div className="flex flex-col gap-3">
                 <span className="font-body font-bold text-[10px] uppercase tracking-[0.2em] text-espresso">
-                  Ketersediaan Kemasan Pouch
+                  Ketersediaan Kemasan
                 </span>
                 <div className="flex gap-3">
                   {['100g', '250g'].map((size) => (
                     <div
                       key={size}
-                      className="flex-1 bg-parchment border border-fog rounded-xl py-3 text-center font-body font-bold text-sm text-espresso tracking-wide hover:border-caramel hover:bg-caramel/8 transition-colors duration-200 cursor-default"
+                      className="flex-1 bg-gradient-to-br from-roast to-espresso border border-white/10 hover:border-caramel/30 rounded-xl py-3.5 text-center font-body font-bold text-xs sm:text-sm text-cream tracking-wide transition-all duration-300 shadow-sm"
                     >
                       {size}
                     </div>
@@ -322,8 +324,8 @@ export default function ProdukDetail() {
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
                   className={`tab-underline ${activeTab === tab.key ? 'active' : ''} font-body text-xs sm:text-sm font-semibold tracking-wide px-5 py-4 whitespace-nowrap transition-colors duration-200 border-b-2 ${activeTab === tab.key
-                      ? 'text-caramel border-caramel'
-                      : 'text-cream/40 border-transparent hover:text-cream/70'
+                    ? 'text-caramel border-caramel'
+                    : 'text-cream/40 border-transparent hover:text-cream/70'
                     }`}
                 >
                   {tab.label}
@@ -462,13 +464,13 @@ export default function ProdukDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
             {/* Card 1 — Retail */}
-            <div className="group relative bg-gradient-to-br from-white to-parchment/40 border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 md:p-10 flex flex-col justify-between gap-8 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500">
+            <div className="group relative bg-gradient-to-br from-roast to-espresso border border-white/10 hover:border-caramel/40 rounded-3xl p-8 md:p-10 flex flex-col justify-between gap-8 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500">
               {/* Corner accent glow */}
-              <div className="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none" />
+              <div className="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-caramel/10 blur-xl group-hover:bg-caramel/20 transition-all duration-500 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col gap-4">
                 {/* Icon area — retail */}
-                <div className="w-11 h-11 rounded-xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-espresso transition-all duration-500 shadow-inner shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                     <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
                     <line x1="3" y1="6" x2="21" y2="6" />
@@ -479,19 +481,19 @@ export default function ProdukDetail() {
                   <span className="font-body text-[10px] tracking-[0.25em] uppercase text-caramel font-bold">
                     Pesanan Retail
                   </span>
-                  <h3 className="font-display text-2xl md:text-3xl text-espresso leading-tight">
+                  <h3 className="font-display text-2xl md:text-3xl text-cream leading-tight">
                     Pesan untuk Konsumsi Pribadi
                   </h3>
                 </div>
-                <p className="font-body text-sm text-espresso/65 leading-relaxed font-light">
+                <p className="font-body text-sm text-cream/70 leading-relaxed font-light">
                   Nikmati rasa autentik robusta Lampung di rumah Anda.
                   Pengiriman langsung ke seluruh wilayah Indonesia via logistik terpercaya.
                 </p>
 
                 {/* Feature list */}
                 <ul className="flex flex-col gap-2 mt-1">
-                  {['Pilihan kemasan 100g · 200g · ', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
-                    <li key={f} className="flex items-center gap-2 font-body text-xs text-espresso/70">
+                  {['Pilihan kemasan 100g · 200g', 'Pengiriman ke seluruh Indonesia', 'Respon cepat via WhatsApp'].map((f) => (
+                    <li key={f} className="flex items-center gap-2 font-body text-xs text-cream/70">
                       <span className="w-3 h-px bg-caramel shrink-0" />
                       {f}
                     </li>
@@ -507,7 +509,7 @@ export default function ProdukDetail() {
               >
                 <Button
                   variant="primary"
-                  className="w-full !bg-caramel !border-caramel hover:!bg-espresso hover:!border-espresso shadow-md transition-all duration-300 gap-2 flex items-center justify-center"
+                  className="w-full !bg-caramel !border-caramel hover:!bg-cream hover:!border-cream hover:!text-espresso shadow-md transition-all duration-300 gap-2 flex items-center justify-center"
                 >
                   <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
                     <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.097.129 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
@@ -518,13 +520,13 @@ export default function ProdukDetail() {
             </div>
 
             {/* Card 2 — B2B / Kemitraan */}
-            <div className="group relative bg-gradient-to-br from-white to-parchment/40 border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 md:p-10 flex flex-col justify-between gap-8 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500">
+            <div className="group relative bg-gradient-to-br from-espresso to-roast border border-white/10 hover:border-caramel/40 rounded-3xl p-8 md:p-10 flex flex-col justify-between gap-8 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500">
               {/* Corner accent glow */}
-              <div className="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-bark/5 blur-xl group-hover:bg-bark/10 transition-all duration-500 pointer-events-none" />
+              <div className="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-caramel/10 blur-xl group-hover:bg-caramel/20 transition-all duration-500 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col gap-4">
                 {/* Icon area — partnership */}
-                <div className="w-11 h-11 rounded-xl bg-espresso/8 border border-espresso/20 flex items-center justify-center text-bark group-hover:scale-110 group-hover:bg-espresso group-hover:text-cream transition-all duration-500 shadow-inner shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cream group-hover:scale-110 group-hover:bg-cream group-hover:text-espresso transition-all duration-500 shadow-inner shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
@@ -536,11 +538,11 @@ export default function ProdukDetail() {
                   <span className="font-body text-[10px] tracking-[0.25em] uppercase text-caramel font-bold">
                     Kemitraan Keagenan
                   </span>
-                  <h3 className="font-display text-2xl md:text-3xl text-espresso leading-tight">
+                  <h3 className="font-display text-2xl md:text-3xl text-cream leading-tight">
                     Katalog Grosir &amp; Keagenan
                   </h3>
                 </div>
-                <p className="font-body text-sm text-espresso/65 leading-relaxed font-light">
+                <p className="font-body text-sm text-cream/70 leading-relaxed font-light">
                   Dapatkan katalog harga khusus agen dan distributor resmi, sampel
                   produk, serta dukungan rantai pasok berkapasitas besar yang aman.
                 </p>
@@ -548,8 +550,8 @@ export default function ProdukDetail() {
                 {/* Feature list */}
                 <ul className="flex flex-col gap-2 mt-1">
                   {['Harga khusus agen & distributor', 'Eksklusivitas wilayah distribusi', 'Dukungan materi promosi & logistik'].map((f) => (
-                    <li key={f} className="flex items-center gap-2 font-body text-xs text-espresso/70">
-                      <span className="w-3 h-px bg-bark shrink-0" />
+                    <li key={f} className="flex items-center gap-2 font-body text-xs text-cream/70">
+                      <span className="w-3 h-px bg-caramel shrink-0" />
                       {f}
                     </li>
                   ))}
@@ -559,7 +561,7 @@ export default function ProdukDetail() {
               <Button
                 variant="outline"
                 href="/kemitraan"
-                className="relative z-10 w-full !border-espresso !text-espresso hover:!bg-espresso hover:!text-cream transition-all duration-300"
+                className="relative z-10 w-full !border-white/30 !text-cream hover:!bg-cream hover:!text-espresso transition-all duration-300"
               >
                 Pelajari Kemitraan
               </Button>

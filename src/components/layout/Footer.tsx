@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
 
             <span className="font-body text-[9px] tracking-[0.2em] uppercase text-cream/30">
-              Est. {SITE_META.establishedYear} &nbsp;·&nbsp; {SITE_META.company}
+              {SITE_META.company}
             </span>
           </div>
 
@@ -92,9 +92,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="font-body text-[10px] tracking-widest uppercase text-cream/25">
-            &copy; {currentYear} {SITE_META.name}. Hak Cipta Dilindungi.
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <span className="font-body text-[10px] tracking-widest uppercase text-cream/25 leading-relaxed">
+            &copy; {currentYear} {SITE_META.name}. Hak Cipta Dilindungi. <br className="sm:hidden" />
+            <span className="hidden sm:inline"> | </span>
+            Designed &amp; Developed by <a href="https://kalanalabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors underline decoration-cream/20 underline-offset-2">Kalana Labs</a>
           </span>
           <span className="font-body text-[10px] tracking-widest uppercase text-cream/25">
             {CONTACT.addressShort}

@@ -55,8 +55,8 @@ export default function Kontak() {
         {/* Full-bleed background */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <Image
-            src="/images/production_gallery_3.png"
-            alt="Hubungi Kopi Bintang Pringsewu"
+            src="/images/productonretail.webp"
+            alt="Produk Kopi Bintang Pringsewu di Retail"
             fill
             priority
             className="object-cover object-center opacity-30"
@@ -90,7 +90,7 @@ export default function Kontak() {
 
       {/* ─── SECTION 2: INFO KONTAK (Premium Grid Cards) ──────────────── */}
       <section className="w-full bg-cream py-20 md:py-28 lg:py-32">
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Card 1: WhatsApp */}
@@ -98,20 +98,20 @@ export default function Kontak() {
               href={CONTACT.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-start bg-white border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden"
+              className="group flex flex-col items-start bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden grain"
             >
               {/* Corner accent glow */}
               <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none" />
               
-              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-espresso transition-all duration-500 shadow-inner mb-6">
                 {iconWhatsApp}
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
-                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">WhatsApp Fast Response</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
+                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-caramel font-bold block">WhatsApp Fast Response</span>
+                <span className="font-body text-base sm:text-lg font-semibold text-white group-hover:text-caramel transition-colors duration-300 break-words tracking-wide">
                   {CONTACT.whatsapp}
                 </span>
-                <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
+                <span className="font-body text-[11px] text-cream/80 leading-relaxed font-normal mt-1.5">
                   Respon kilat untuk pemesanan cepat, nego harga, atau info stok.
                 </span>
               </div>
@@ -122,20 +122,20 @@ export default function Kontak() {
             {/* Card 2: Phone */}
             <a
               href={`tel:${CONTACT.phone.replace(/\s+/g, '')}`}
-              className="group flex flex-col items-start bg-white border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden"
+              className="group flex flex-col items-start bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden grain"
             >
               {/* Corner accent glow */}
               <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none" />
               
-              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-espresso transition-all duration-500 shadow-inner mb-6">
                 {iconPhone}
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
-                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Panggilan Telepon</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
+                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-caramel font-bold block">Panggilan Telepon</span>
+                <span className="font-body text-base sm:text-lg font-semibold text-white group-hover:text-caramel transition-colors duration-300 break-words tracking-wide">
                   {CONTACT.phone}
                 </span>
-                <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
+                <span className="font-body text-[11px] text-cream/80 leading-relaxed font-normal mt-1.5">
                   Hubungi staf layanan kami langsung pada jam operasional kantor.
                 </span>
               </div>
@@ -146,20 +146,20 @@ export default function Kontak() {
             {/* Card 3: Email */}
             <a
               href={`mailto:${CONTACT.email}`}
-              className="group flex flex-col items-start bg-white border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden"
+              className="group flex flex-col items-start bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden grain"
             >
               {/* Corner accent glow */}
               <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none" />
               
-              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-espresso transition-all duration-500 shadow-inner mb-6">
                 {iconEmail}
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
-                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Email Korespondensi</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-all">
+                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-caramel font-bold block">Email Korespondensi</span>
+                <span className="font-body text-base sm:text-lg font-semibold text-white group-hover:text-caramel transition-colors duration-300 break-words">
                   {CONTACT.email}
                 </span>
-                <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
+                <span className="font-body text-[11px] text-cream/80 leading-relaxed font-normal mt-1.5">
                   Kirimkan penawaran kerja sama B2B resmi atau proposal usaha.
                 </span>
               </div>
@@ -170,20 +170,20 @@ export default function Kontak() {
             {/* Card 4: Location */}
             <a
               href="#map"
-              className="group flex flex-col items-start bg-white border border-bark/10 hover:border-caramel/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden"
+              className="group flex flex-col items-start bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 text-left relative overflow-hidden grain"
             >
               {/* Corner accent glow */}
               <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl group-hover:bg-caramel/10 transition-all duration-500 pointer-events-none" />
               
-              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-cream transition-all duration-500 shadow-inner mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-caramel/10 border border-caramel/25 flex items-center justify-center text-caramel group-hover:scale-110 group-hover:bg-caramel group-hover:text-espresso transition-all duration-500 shadow-inner mb-6">
                 {iconLocation}
               </div>
               <div className="flex flex-col gap-1.5 min-w-0 w-full pr-4 relative z-10">
-                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted font-bold block">Lokasi Workshop</span>
-                <span className="font-display text-base font-bold text-espresso group-hover:text-bark transition-colors duration-300 break-words">
+                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-caramel font-bold block">Lokasi Workshop</span>
+                <span className="font-body text-base sm:text-lg font-semibold text-white group-hover:text-caramel transition-colors duration-300 break-words leading-snug">
                   {CONTACT.addressShort}
                 </span>
-                <span className="font-body text-[11px] text-muted leading-relaxed font-light mt-1.5">
+                <span className="font-body text-[11px] text-cream/80 leading-relaxed font-normal mt-1.5">
                   Kunjungi fasilitas roasting & kemasan kami di Lampung.
                 </span>
               </div>
@@ -209,23 +209,26 @@ export default function Kontak() {
 
             {/* Info Column (Right) */}
             <div className="lg:col-span-5 flex flex-col justify-center items-start gap-6 text-left">
-              <div className="bg-white border border-fog/50 p-8 rounded-3xl shadow-md flex flex-col gap-6 w-full text-left">
-                <span className="font-mono text-[9px] uppercase tracking-widest text-caramel font-bold block">Detail Operasional</span>
-                <h3 className="font-display text-2xl font-semibold text-espresso">Kantor & Workshop</h3>
+              <div className="bg-gradient-to-br from-roast via-espresso to-[#150D06] border border-white/5 p-8 rounded-3xl shadow-xl flex flex-col gap-6 w-full text-left relative overflow-hidden grain">
+                {/* Subtle background glow */}
+                <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-caramel/5 blur-xl pointer-events-none" />
                 
-                <div className="flex flex-col gap-5 mt-2 divide-y divide-fog/20">
+                <span className="font-mono text-[9px] uppercase tracking-widest text-caramel font-bold block relative z-10">Detail Operasional</span>
+                <h3 className="font-display text-2xl font-semibold text-white relative z-10">Kantor & Workshop</h3>
+                
+                <div className="flex flex-col gap-5 mt-2 divide-y divide-white/10 relative z-10">
                   {/* Item 1 */}
                   <div className="flex flex-col gap-1.5 pt-4 first:pt-0">
-                    <strong className="font-display text-sm text-espresso font-semibold">Alamat Workshop Utama</strong>
-                    <p className="font-body text-xs text-muted leading-relaxed font-light">
+                    <strong className="font-display text-sm text-white font-medium">Alamat Workshop Utama</strong>
+                    <p className="font-body text-xs text-cream/80 leading-relaxed font-normal">
                       {CONTACT.address}
                     </p>
                   </div>
                   
                   {/* Item 2 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Jam Operasional</strong>
-                    <p className="font-body text-xs text-muted leading-relaxed font-light">
+                    <strong className="font-display text-sm text-white font-medium">Jam Operasional</strong>
+                    <p className="font-body text-xs text-cream/80 leading-relaxed font-normal">
                       Senin – Sabtu: 08:00 – 17:00 WIB<br />
                       Minggu & Hari Libur Nasional: Tutup
                     </p>
@@ -233,19 +236,19 @@ export default function Kontak() {
                   
                   {/* Item 3 */}
                   <div className="flex flex-col gap-1.5 pt-4">
-                    <strong className="font-display text-sm text-espresso font-semibold">Komitmen Pelayanan</strong>
-                    <p className="font-body text-xs text-muted leading-relaxed font-light">
+                    <strong className="font-display text-sm text-white font-medium">Komitmen Pelayanan</strong>
+                    <p className="font-body text-xs text-cream/80 leading-relaxed font-normal">
                       Sebagai produsen terpercaya, CV. Harapan Buah Hati Mandiri Tunggal berkomitmen melayani pesanan retail dan pengiriman sampel untuk calon distributor secara profesional dan higienis.
                     </p>
                   </div>
                 </div>
 
-                <div className="border-t border-fog/30 pt-6 mt-2 flex flex-col gap-1">
-                  <span className="font-mono text-[9px] text-bark font-bold uppercase tracking-wider">
+                <div className="border-t border-white/10 pt-6 mt-2 flex flex-col gap-1 relative z-10">
+                  <span className="font-mono text-[9px] text-caramel font-bold uppercase tracking-wider">
                     {SITE_META.company}
                   </span>
-                  <span className="text-xs text-muted leading-relaxed font-light">
-                    Sertifikasi P-IRT resmi dan Halal terdaftar.
+                  <span className="text-xs text-cream/70 leading-relaxed font-normal">
+                    Sertifikasi resmi dan Halal terdaftar.
                   </span>
                 </div>
               </div>
